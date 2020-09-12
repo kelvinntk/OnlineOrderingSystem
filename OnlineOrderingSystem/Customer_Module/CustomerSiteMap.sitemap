@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode url="Customer_Module/CustomerHome.aspx" title="Home"  description="">
+
+    <siteMapNode url="Customer_Module/CustomerProfile.aspx" title="Profile"  description="">
+    </siteMapNode>
+
+    <siteMapNode url="Customer_Module/ArtGallery.aspx" title="Gallery"  description="">
+
+      <siteMapNode url="Customer_Module/AbstractArt.aspx" title="Abstract"  description="" />
+      <siteMapNode url="Customer_Module/IllustrationArt.aspx" title="Illustration"  description="" />
+      <siteMapNode url="Customer_Module/PaintingArt.aspx" title="Painting"  description="" />
+      <siteMapNode url="Customer_Module/UnavailableArt.aspx" title="Unavailable"  description="" />
+
+    </siteMapNode>
+
+    <siteMapNode url="Customer_Module/AllOrder.aspx" title="Order"  description="">
+
+      <siteMapNode url="Customer_Module/PendingOrder.aspx" title="Pending Order"  description="" />
+      <siteMapNode url="Customer_Module/OrderHistory.aspx" title="Payment History"  description="" />
+
+    </siteMapNode>
+
+    <siteMapNode url="Customer_Module/Wishlist.aspx" title="Wishlist"  description="">
+    </siteMapNode>
+
+  </siteMapNode>
+  
+</siteMap>

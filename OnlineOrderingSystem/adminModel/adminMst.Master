@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminMst.master.cs" Inherits="adminModel.adminModel.adminMst" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <style>
+        .adminMstTable {
+            margin-left:10%;
+            margin-top:5%;
+            background-color:lightgrey;
+            padding:15px;
+            padding-bottom:50px;
+            border-radius:50px;
+            }
+        td.frt {
+            width: 5%;
+            }
+        td.scd {
+            width: 55%;
+            }
+        td.last {
+            width: 15%;
+        }
+    </style>
+    <title>Admin</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="mst.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+        <table style="width:80%" class="adminMstTable">
+            <tr>
+                    <td style="padding: 0.3em; background-color: rgb(25, 25, 50); vertical-align: middle;" class="frt">
+                        <a href="adminHome.aspx"><asp:Image ID="Image1" runat="server" Height="100px" ImageAlign="Left" ImageUrl="~/img/logo.jpg" /></a>
+                    </td>
+                    <td style="background-color: rgb(25, 25, 50); vertical-align: middle;" colspan="2">
+            
+                        <div style="text-align:right; margin-right:5%">
+
+                        <asp:Button ID="Button1" runat="server" Text="Log Out" OnClick="Button1_Click" style="padding:0.3em;" BackColor="#191932" BorderColor="White" BorderStyle="Solid" BorderWidth="0.1em" CssClass="auto-style2" Font-Size="1.75em" ForeColor="White" />
+
+                        </div>
+                    </td>
+                </tr>
+            <tr>
+                <td colspan="3" >
+                    <div Style="background-color:grey">
+                        <asp:SiteMapPath ID="SiteMapPath1" runat="server" SiteMapProvider="admin">
+                        </asp:SiteMapPath>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="frt">
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ExpandDepth="1" BorderColor="Black" BorderStyle="Solid" BorderWidth="0.1em" Font-Size="1em" Font-Strikeout="False" ImageSet="Arrows" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged">
+                <HoverNodeStyle Font-Underline="True" ForeColor="#0000CC" />
+                <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                <ParentNodeStyle Font-Bold="False" />
+                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+            </asp:TreeView>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" SiteMapProvider="admin"/>
+                </td>
+                <td class="scd">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+                <td class="last"></td>
+            </tr>
+            <tr>
+                <td class="frt">&nbsp;</td>
+                <td class="scd"></td>
+                <td class="last"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

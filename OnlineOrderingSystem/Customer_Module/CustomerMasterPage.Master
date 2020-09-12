@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CustomerMasterPage.master.cs" Inherits="CustomerModule.Customer_Module.CustomerMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/CustomerCSS.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            margin-top: 0px;
+        }
+        .auto-style3 {
+            width: 624px;
+        }
+        .auto-style4 {
+            width: 546px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="masterDIV">
+
+            <table class="auto-style1 masterTable" style=" border-collapse: collapse">
+                <tr>
+                    <td style="padding: 0.3em; background-color: rgb(25, 25, 50); vertical-align: middle;" class="auto-style4">
+                        <a href="CustomerHome.aspx"><asp:Image ID="Image1" runat="server" Height="100px" ImageAlign="Left" ImageUrl="~/Customer_Module/images/logo.jpeg" /></a>
+                    </td>
+                    <td style="background-color: rgb(25, 25, 50); vertical-align: middle;">
+            
+                        <div style="text-align:right; margin-right:5%">
+
+                            <asp:Label ID="Label1" runat="server" ForeColor="White"></asp:Label>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <%--<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login_Module/homepage.aspx"><input id="Button1" type="button" value="Log Out" style="padding:0.3em; background-color:#191932; border:0.1em solid white; font-size:1.75em; color:white;" /></asp:HyperLink>--%>
+                        
+                            <asp:Button ID="Button1" runat="server" Text="Log Out" OnClick="Button1_Click" style="padding:0.3em;" BackColor="#191932" BorderColor="White" BorderStyle="Solid" BorderWidth="0.1em" CssClass="auto-style2" Font-Size="1.75em" ForeColor="White" UseSubmitBehavior="False" />
+
+                        </div>
+                    </td>
+                </tr>
+                </table>
+            <table class="auto-style1">
+                <tr>
+                    <td><br />&nbsp;</td>
+                    <td class="auto-style3" style="padding: 1em; vertical-align: top">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="1em" PathSeparator=" : ">
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+                <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+            </asp:SiteMapPath>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 1em; vertical-align: top; width: 20%;">
+            <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ExpandDepth="1" BorderColor="Black" BorderStyle="Solid" BorderWidth="0.1em" Font-Size="1em" Font-Strikeout="False" ImageSet="Arrows" style="padding:10%;">
+                <HoverNodeStyle Font-Underline="True" ForeColor="#0000CC" />
+                <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                <ParentNodeStyle Font-Bold="False" />
+                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+            </asp:TreeView>
+
+                    <br />
+
+            <div align="center">
+
+                <%--<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Customer_Module/Cart.aspx"><input id="Button2" type="button" value="Your Cart" style="padding:0.3em; background-color:white; border:0.1em solid black; font-size:1.75em; color:black;" /></asp:HyperLink>--%>
+
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="padding:0.3em;" Text="Your Cart" BackColor="White" BorderColor="Black" BorderStyle="Solid" BorderWidth="0.1em" Font-Size="1.75em" ForeColor="Black" UseSubmitBehavior="False" />
+
+            </div>
+
+                    </td>
+                    <td class="auto-style3" style="padding: 1em; vertical-align: top">
+            <asp:ContentPlaceHolder ID="CustomerContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" SiteMapProvider="CustomerSiteMap" />
+            <br />
+            <br />
+            <br />
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,148 @@
+﻿
+/*
+    General
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    line-height: 2;
+    font-size: 1em;
+    font-family: 'InnisfreeGothic',NanumGothic,나눔고딕,"맑은 고딕","Malgun Gothic","NanumGothicWeb", 돋움,Dotum,굴림,Gulim,sans-serif;
+}
+
+@font-face {
+    font-family: 'InnisfreeGothic';
+    src: url(../font/InnisfreeGothicR.eot);
+    src: url(../font/InnisfreeGothicR.eot?#iefix) format('embedded-opentype'), url(../font/InnisfreeGothicR.woff) format('woff'), url(../font/InnisfreeGothicR.ttf) format('truetype');
+}
+
+
+
+
+
+
+.mySlides {
+    display: none;
+}
+
+.indexWallpaper {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Caption text */
+.text {
+    color: white;
+    font-size: 2em;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0px;
+    width: auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.miniLogoIMG {
+    /*width: 74px;*/
+    height: 74px;
+    margin-top: -15px;
+    margin-left: -9px;
+    margin-right: -12px;
+    margin-bottom: -24px;
+    padding-right: 15px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.thisSlide {
+    background-color: #333;
+}
+
+.dot:hover {
+    background-color: gray;
+}
+
+.thisSlide:hover {
+    background-color: #333;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+
+
+
+
+.masterDIV {
+    width: 70%;
+    margin: auto;
+}
+
+
+
+

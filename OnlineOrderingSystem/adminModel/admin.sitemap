@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/adminModel/adminHome.aspx" title="homepage"  description="homepage">
+    <siteMapNode url="~/adminModel/viewArtist.aspx" title="viewArtist"  description="view">
+      <siteMapNode url="~/adminModel/selectedArtist.aspx" title="artist selected"  description="Artist selected">
+        <siteMapNode url="~/adminModel/showArt.aspx" title="Art" description="=Art"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+
+  <siteMapNode url="~/adminModel/viewCust.aspx" title="viewCust"  description="view">
+      <siteMapNode url="~/adminModel/selectedCust.aspx" title="customer selected"  description="Customer selected">
+        <siteMapNode url="~/adminModel/showOrder.aspx" title="Order"  description="Order">
+          <siteMapNode url="~/adminModel/orderDetail.aspx" title="Order Detail "  description="Order Detail "/>
+          </siteMapNode>
+        </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

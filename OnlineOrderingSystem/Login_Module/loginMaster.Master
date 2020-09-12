@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="loginMaster.master.cs" Inherits="Login_Module.Login_Module.loginMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/loginCSS.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="masterDIV">
+
+            <br />
+            <table class="auto-style1">
+                <tr>
+                    <td style="padding: 0.3em; background-color: rgb(25, 25, 50); vertical-align: middle;">
+                        <a href="homepage.aspx"><asp:Image ID="Image1" runat="server" Height="100px" ImageAlign="Left" ImageUrl="~/Login_Module/images/logo.jpeg" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderLogin" runat="server">
+            </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            <br /><br /><br /><br />
+
+        </div>
+    </form>
+</body>
+</html>

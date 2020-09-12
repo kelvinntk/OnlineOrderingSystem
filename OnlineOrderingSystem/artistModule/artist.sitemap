@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="artistModule/artistHome.aspx" title="HomePage"  description="HomePage">
+    <siteMapNode url="artistModule/addArt.aspx" title="AddArt"  description="AddArt" />
+    <siteMapNode url="artistModule/viewArt.aspx" title="ViewArt"  description="ViewArt">
+      <siteMapNode url="artistModule/artDetails.aspx" title="ArtDetail"  description="ArtDetail" />
+      </siteMapNode>
+    <siteMapNode url="artistModule/viewDeletedArt.aspx" title="DeletedArt" description="DeletedArt"/>
+    <siteMapNode url="artistModule/profile.aspx" title="Profile"  description="Profile" >
+      <siteMapNode url="artistModule/updProfile.aspx" title="Update"  description="Update Profile" />
+      </siteMapNode>
+  </siteMapNode>
+</siteMap>
