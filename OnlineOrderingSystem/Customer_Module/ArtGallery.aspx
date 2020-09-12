@@ -6,7 +6,7 @@
 
 <asp:Content ID="customerArtGallery" ContentPlaceHolderID="CustomerContentPlaceHolder" runat="server">
 
-    <h1> Art Gallery </h1>
+    <h1>Art Gallery </h1>
 
     <br />
 
@@ -16,16 +16,16 @@
 
             <table>
                 <tr>
-                    <td style="padding:1em">
+                    <td style="padding: 1em">
 
-                        <UserControl1:Header ID="Header1" runat="server"/>
+                        <UserControl1:Header ID="Header1" runat="server" />
 
                         <%--<asp:Image ID="Image1" runat="server" ImageUrl='<%# "ShowImage.ashx?ArtID=" + Eval("ArtID") %>' Width="400px" Height="300px" />--%>
                     </td>
 
-                    <td style="width:50%; padding:1em">
+                    <td style="width: 50%; padding: 1em">
 
-                        <UserControl2:Header ID="ctlHeader" runat="server"/>
+                        <UserControl2:Header ID="ctlHeader" runat="server" />
 
                         <%--<h2><%# Eval ("Art_Name") %></h2>
                         <br />
@@ -40,20 +40,22 @@
                         <%# Eval ("Description") %>--%>
                     </td>
 
-                    <td style="width:20%; padding:1em">
+                    <td style="width: 20%; padding: 1em">
 
-                        <UserControl3:Header ID="Header2" runat="server"/>
-                        
+                        <UserControl3:Header ID="Header2" runat="server" />
+
                         <%--Price: <%# Eval ("Price", "{0:C}") %>
                         <br />
                         Stock Left: <%# Eval ("NoOfStock") %>--%>
 
                         <br />
                         <br />
-                        <a href="/Customer_Module/AddToCart.aspx?ArtID=<%#: Eval ("ArtID") %>"><input id="Button1" class="buttonStyle" type="button" value="Add To Cart" /></a>
+                        <a href="/Customer_Module/AddToCart.aspx?ArtID=<%#: Eval ("ArtID") %>">
+                            <input id="Button1" class="buttonStyle" type="button" value="Add To Cart" /></a>
                         <br />
                         <br />
-                        <a href="/Customer_Module/AddToWishlist.aspx?ArtID=<%#: Eval ("ArtID") %>"><input id="Button2" class="buttonStyle" type="button" value="<%# checkWishlist(Eval("ArtID") + "") %>" /></a>
+                        <a href="/Customer_Module/AddToWishlist.aspx?ArtID=<%#: Eval ("ArtID") %>">
+                            <input id="Button2" class="buttonStyle" type="button" value="<%# checkWishlist(Eval("ArtID") + "") %>" /></a>
 
                         <%--<a href="/Customer_Module/AddToWishlist.aspx?ArtID=<%#: Eval ("ArtID") %>">               
                                         <input id="Button2" type="button" value="Add to / Remove from Wishlist" />
@@ -80,7 +82,8 @@
 FROM Art A, Artist B  
 WHERE A.NoOfStock &gt; 0 
 AND A.Status = 'AVAILABLE' 
-AND A.ArtistID = B.ArtistID" InsertCommand="INSERT INTO Cart(CustomerID, ArtID, Art_Name, Quantity, Total, ImageName, ImagePath) VALUES (@CustomerID, @ArtID, @Art_Name, 1, @Total, @ImageName, @ImagePath)" UpdateCommand="UPDATE Cart SET Quantity = @Quantity, Total = @Total WHERE CustomerID = @CustomerID AND ArtID = @ArtID">
+AND A.ArtistID = B.ArtistID"
+        InsertCommand="INSERT INTO Cart(CustomerID, ArtID, Art_Name, Quantity, Total, ImageName, ImagePath) VALUES (@CustomerID, @ArtID, @Art_Name, 1, @Total, @ImageName, @ImagePath)" UpdateCommand="UPDATE Cart SET Quantity = @Quantity, Total = @Total WHERE CustomerID = @CustomerID AND ArtID = @ArtID">
         <InsertParameters>
             <asp:Parameter Name="CustomerID" />
             <asp:Parameter Name="ArtID" />
@@ -100,23 +103,23 @@ AND A.ArtistID = B.ArtistID" InsertCommand="INSERT INTO Cart(CustomerID, ArtID, 
     <br />
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/themes/start/jquery-ui.css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $("#dialog").dialog({
-            autoOpen: false,
-            modal: true,
-            height: 600,
-            width: 600,
-            title: "Zoomed Image"
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/themes/start/jquery-ui.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                height: 600,
+                width: 600,
+                title: "Zoomed Image"
+            });
+            $("[id*=Repeater1] img").click(function () {
+                $('#dialog').html('');
+                $('#dialog').append($(this).clone());
+                $('#dialog').dialog('open');
+            });
         });
-        $("[id*=Repeater1] img").click(function () {
-            $('#dialog').html('');
-            $('#dialog').append($(this).clone());
-            $('#dialog').dialog('open');
-        });
-    });
-</script>
+    </script>
 
 </asp:Content>
