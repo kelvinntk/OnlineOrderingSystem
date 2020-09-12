@@ -25,7 +25,7 @@
             <table class="auto-style1">
                 <tr>
                     <td style="padding: 0.3em; background-color: rgb(25, 25, 50); vertical-align: middle;">
-                        <a href="homepage.aspx"><asp:Image ID="Image1" runat="server" Height="100px" ImageAlign="Left" ImageUrl="~/Login_Module/images/logo.jpeg" /></a>
+                        <a href="homepage.aspx"><asp:Image ID="Image1" runat="server" Height="100px" ImageAlign="Left" ImageUrl="~/Login_Module/images/logo.JPEG" /></a>
                     </td>
                 </tr>
                 <tr>

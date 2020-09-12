@@ -6,7 +6,7 @@
     <siteMapNode url="Customer_Module/CustomerProfile.aspx" title="Profile"  description="">
     </siteMapNode>
 
-    <siteMapNode url="Customer_Module/ArtGallery.aspx" title="Gallery"  description="">
+    <siteMapNode url="Customer_Module/ArtGallery.aspx" title="Menu"  description="">
 
       <siteMapNode url="Customer_Module/AbstractArt.aspx" title="Abstract"  description="" />
       <siteMapNode url="Customer_Module/IllustrationArt.aspx" title="Illustration"  description="" />

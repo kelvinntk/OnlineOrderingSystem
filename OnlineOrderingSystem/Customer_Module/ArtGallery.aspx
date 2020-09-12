@@ -6,7 +6,7 @@
 
 <asp:Content ID="customerArtGallery" ContentPlaceHolderID="CustomerContentPlaceHolder" runat="server">
 
-    <h1>Art Gallery </h1>
+    <h1>Menu </h1>
 
     <br />
 
