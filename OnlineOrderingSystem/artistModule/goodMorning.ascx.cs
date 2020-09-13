@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace OnlineOrderingSystem.artistModule
+namespace ArtGallery.artistModule
 {
     public partial class goodMorning : System.Web.UI.UserControl
     {

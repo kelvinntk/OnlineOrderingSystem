@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ArtModule
+namespace OnlineOrderingSystem
 {
     public partial class artistHome : System.Web.UI.MasterPage
     {

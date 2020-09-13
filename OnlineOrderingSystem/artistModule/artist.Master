@@ -1,6 +1,6 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="artist.Master.cs" Inherits="ArtModule.artistHome" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="artist.Master.cs" Inherits="OnlineOrderingSystem.artistHome" %>
 
-<%@ Register src="WebUserControl1.ascx" tagname="WebUserControl1" tagprefix="uc1" %>
+<%--<%@ Register src="WebUserControl1.ascx" tagname="WebUserControl1" tagprefix="uc1" %>--%>
 
 <!DOCTYPE html>
 
@@ -61,7 +61,7 @@
             <table class="main">
                 <tr>
                     <td style="padding: 0.3em; background-color: rgb(25, 25, 50); vertical-align: middle;" class="auto-style4">
-                        <a href="artistHome.aspx"><asp:Image ID="Image1" runat="server" Height="100px" ImageAlign="Left" ImageUrl="~/img/logo.jpg" /></a>
+                        <a href="artistHome.aspx"><asp:Image ID="Image1" runat="server" Height="100px" ImageAlign="Left" ImageUrl="~/artistModule/img/logo.jpeg" /></a>
                     </td>
                     <td style="background-color: rgb(25, 25, 50); vertical-align: middle;" colspan="2">
             
@@ -81,7 +81,7 @@
                         <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
                         </asp:SiteMapPath>
 
-                        <uc1:WebUserControl1 ID="WebUserControl11" runat="server" />
+                        <%--<uc1:WebUserControl1 ID="WebUserControl11" runat="server" />--%>
                     </td>
                     <td rowspan="3" class="third">
                         <asp:ContentPlaceHolder ID="Content2" runat="server">
@@ -92,9 +92,9 @@
                     <td colspan="2">
                         <ul>
                             <li><a href="artistHome.aspx">Home</a></li>
-                            <li><a href="addArt.aspx">Add Art</a></li>
-                            <li><a href="viewArt.aspx">View Art</a></li>
-                            <li><a href="viewDeletedArt.aspx">Deleted Art</a></li>
+                            <li><a href="addItem.aspx">Add Item</a></li>
+                            <li><a href="viewItem.aspx">View Item</a></li>
+                            <li><a href="viewDeletedItem.aspx">Deleted Item</a></li>
                             <li><a href="profile.aspx"> Profile</a></li>
                         </ul>
                     </td>

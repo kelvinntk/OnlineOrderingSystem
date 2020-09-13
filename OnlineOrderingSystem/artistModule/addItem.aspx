@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/artistModule/artist.Master" AutoEventWireup="true" CodeBehind="addArt.aspx.cs" Inherits="ArtModule.addArt" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/artistModule/artist.Master" AutoEventWireup="true" CodeBehind="addItem.aspx.cs" Inherits="OnlineOrderingSystem.addArt" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <title>Add new Art</title>
+    <title>Add new Item</title>
     <style type="text/css">
         .auto-style1 {
             border-collapse: separate;
@@ -19,7 +19,7 @@
     </style>
         <div>
             <div style="text-align: center;">
-                <u style="font-size: 20px;"><b>Add New Art:</b></u><br /><br />
+                <u style="font-size: 20px;"><b>Add New Item:</b></u><br /><br />
             </div>
             <table class="auto-style1" align="center">
 <%--                <tr>
@@ -27,15 +27,15 @@
                     <td><asp:TextBox ID="ArtistIDTextBox" runat="server" /></td>
                 </tr>--%>
                 <tr>
-                    <td class="auto-style2">Art Name:</td>
+                    <td class="auto-style2">Item Name:</td>
                     <td>
-                        <asp:TextBox ID="Art_NameTextBox" runat="server"/>
-                        <asp:RequiredFieldValidator ID="RequiredFieldArtName" runat="server"
-                            ErrorMessage="Art Name is required." Font-Italic="true" ForeColor="Red" ControlToValidate="Art_NameTextBox">
+                        <asp:TextBox ID="Item_NameTextBox" runat="server"/>
+                        <asp:RequiredFieldValidator ID="RequiredFieldItemName" runat="server"
+                            ErrorMessage="Item Name is required." Font-Italic="true" ForeColor="Red" ControlToValidate="Item_NameTextBox">
                         </asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidatorString" runat="server"
                             ErrorMessage="Do not include special character (e.g. @,!,#,$,%,^,...)" Font-Italic="true" ForeColor="Red"
-                            ValidationExpression="[a-zA-Z0-9 ]*" ControlToValidate="Art_NameTextBox">
+                            ValidationExpression="[a-zA-Z0-9 ]*" ControlToValidate="Item_NameTextBox">
                         </asp:RegularExpressionValidator>
                     </td>
                 </tr>
@@ -53,9 +53,10 @@
                     <td>
                         <asp:DropDownList ID="DropDownList1" runat="server">
                             <asp:ListItem Value="-1">--Select Category--</asp:ListItem>
-                            <asp:ListItem>Abstract</asp:ListItem>
-                            <asp:ListItem>Drawings-illustration</asp:ListItem>
-                            <asp:ListItem>Painting</asp:ListItem>
+                            <asp:ListItem>Meal</asp:ListItem>
+                            <asp:ListItem>Beverage</asp:ListItem>
+                            <asp:ListItem>Snack</asp:ListItem>
+                            <asp:ListItem>Bakery</asp:ListItem>
                         </asp:DropDownList>
                         <asp:RequiredFieldValidator ID="RequiredFieldDropDownList1" runat="server"
                             ErrorMessage="Category is required." Font-Italic="true" ForeColor="Red" InitialValue="-1" ControlToValidate="DropDownList1">
@@ -124,7 +125,7 @@
                 <tr>
                     <td class="auto-style3"></td>
                     <td>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/artistModule/viewArt.aspx">View Art</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/artistModule/viewItem.aspx">View Item</asp:HyperLink>
                     </td>
                 </tr>
             </table>

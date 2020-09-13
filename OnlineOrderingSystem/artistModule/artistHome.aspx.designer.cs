@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ArtModule
+namespace OnlineOrderingSystem
 {
 
 

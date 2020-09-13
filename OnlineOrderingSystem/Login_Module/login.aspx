@@ -53,7 +53,7 @@
 
                     <br/>
 
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/registerModel/selectRegis.aspx">Create a new account</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Login_Module/Registration.aspx">Create a new account</asp:HyperLink>
 
                     <br/><br/>
 

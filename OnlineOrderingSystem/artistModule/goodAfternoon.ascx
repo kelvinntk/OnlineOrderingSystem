@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="goodAfternoon.ascx.cs" Inherits="OnlineOrderingSystem.artistModule.goodAfternoon" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="goodAfternoon.ascx.cs" Inherits="ArtGallery.artistModule.goodAfternoon" %>
 <style>
     .greeting{
         text-align:center;

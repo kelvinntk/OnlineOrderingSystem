@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OnlineOrderingSystem.artistModule
+namespace ArtGallery.artistModule
 {
 
 

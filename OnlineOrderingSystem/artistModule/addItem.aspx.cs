@@ -10,7 +10,7 @@ using System.Configuration;
 using OnlineOrderingSystem.registerModel;
 using System.IO;
 
-namespace ArtModule
+namespace OnlineOrderingSystem
 {
     public partial class addArt : System.Web.UI.Page
     {
@@ -54,15 +54,15 @@ namespace ArtModule
 
                             SqlParameter paramArtistID = new SqlParameter()
                             {
-                                ParameterName = "@ArtistID",
+                                ParameterName = "@SatffID",
                                 Value = Session["UserID"] + ""
                             };
                             cmd.Parameters.Add(paramArtistID);
 
                             SqlParameter paramArtName = new SqlParameter()
                             {
-                                ParameterName = "@Art_Name",
-                                Value = Art_NameTextBox.Text
+                                ParameterName = "@Item_Name",
+                                Value = Item_NameTextBox.Text
                             };
                             cmd.Parameters.Add(paramArtName);
 
