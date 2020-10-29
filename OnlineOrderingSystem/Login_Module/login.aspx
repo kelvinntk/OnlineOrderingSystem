@@ -4,93 +4,123 @@
 
     <br /><br />
 
-    <table class="login" style="width: 50%; margin: auto;">
-        <tr>
-            <td colspan="2">
+    <div class="container" style="width: 50%; margin: auto;">
+        <div>
+            <div>
                 <br />
-                <div align="center">
+                <div>
                     <h1>Login</h1>
                 </div>
                 <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Email:&nbsp;</td>
-            <td class="auto-style2">
-                &nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="250px"></asp:TextBox>
+            </div>
+        </div>
+        <div class="textbox">
+            <div class="textboxInput">
+                <div class="label">Email</div>
+                <div>
+                    <asp:TextBox ID="TextBox1" class="textboxes" runat="server" Width="250px" placeholder=' example@mail.com'></asp:TextBox> <br />
 
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                            ErrorMessage="Email is required!" 
-                            ControlToValidate="TextBox1"
-                            CssClass="ValidationError" ForeColor="Red"
-                    ></asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">Password:&nbsp;</td>
-            <td class="auto-style2">
-                &nbsp;<asp:TextBox ID="TextBox2" runat="server" Width="250px" TextMode="Password"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                                ErrorMessage="Email is required!" 
+                                ControlToValidate="TextBox1"
+                                CssClass="ValidationError" ForeColor="Red"
+                        ></asp:RequiredFieldValidator>
+                </div>
+            </div>
+            <div class="textboxInput">
+                <div class="label">Password</div>
+                <div>
+                    <asp:TextBox ID="TextBox2" class="textboxes" runat="server" Width="250px" TextMode="Password" placeholder=' only you know'></asp:TextBox> <br />
                 
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                            ErrorMessage="Password is required!" 
-                            ControlToValidate="TextBox2"
-                            CssClass="ValidationError" ForeColor="Red"
-                    ></asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                                ErrorMessage="Password is required!" 
+                                ControlToValidate="TextBox2"
+                                CssClass="ValidationError" ForeColor="Red"
+                        ></asp:RequiredFieldValidator>
+                </div>
+            </div>
+        </div>
+        <div>
                 <div align="center">
-
-                    <br />
-
                     <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
-
                     <br />
-
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login_Module/forgetPassword.aspx">Forgotten your password?</asp:HyperLink>
-
                     <br/>
-
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Login_Module/Registration.aspx">Create a new account</asp:HyperLink>
-
                     <br/><br/>
-
-                <asp:Button ID="Button1" runat="server" style="padding:0.3em;" OnClick="Button1_Click" Text="Log In" BackColor="White" BorderColor="Black" BorderStyle="Solid" BorderWidth="0.1em" Font-Size="1.75em" ForeColor="Black" />
-
+                    <asp:Button ID="Button1" runat="server" style="padding:0.3em;" class="button" OnClick="Button1_Click" Text="Log In" />
                     <br /><br /><br />
-
-                    </div>
-
-            </td>
-        </tr>
-    </table>
-    <br />
-    <br />
-    <br />
-    <br />
+                </div>
+        </div>
+    </div>
 
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">
-
-        .auto-style2 {
-            height: 34px;
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: 600;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: background-color 0.3s, color 0.3s;
         }
-
-        .login {
-            border: 0.1em solid black;
+        .button:hover {
+            background-color: #555555;
+            color: white;
         }
-
-        .auto-style3 {
-            height: 34px;
-            text-align: right;
-            width: 226px;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 50px;
+            border-radius: 5px;
+            z-index: 1;
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
         }
-        .auto-style4 {
-            text-align: right;
-            width: 226px;
+        .container .textboxInput {
+            display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+        }
+        .container .textbox .label {
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .container .textbox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container .textbox .textboxes {
+            width: 500px;
+            height: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: 500;
+            border: none;
+            color: #525952;
+            font-size: 17px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+            opacity: 0.75;
+            transition: opacity 0.3s;
+        }
+        .container .textbox .textboxes:hover {
+            opacity: 1;
+        }
+        .container .textbox .textboxes:focus {
+            opacity: 1;
+            outline: none;
         }
 
     </style>
