@@ -11,6 +11,9 @@
     <link href="css/loginCSS.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
+        a{
+            font-family: 'Poppins';
+        }
         .auto-style1 {
           width: 100%;
         }

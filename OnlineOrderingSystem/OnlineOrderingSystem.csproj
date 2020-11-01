@@ -102,7 +102,6 @@
     <Content Include="artistModule\img\mid.jpg" />
     <Content Include="artistModule\img\morning.png" />
     <Content Include="artistModule\img\night.jpg" />
-    <Content Include="CSS\masterCSS.css" />
     <Content Include="Customer_Module\AbstractAddToCart.aspx" />
     <Content Include="Customer_Module\AbstractAddToWishlist.aspx" />
     <Content Include="Customer_Module\AbstractArt.aspx" />

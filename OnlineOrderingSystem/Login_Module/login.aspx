@@ -111,7 +111,7 @@
             color: #525952;
             font-size: 17px;
             border-radius: 5px;
-            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
             opacity: 0.75;
             transition: opacity 0.3s;
         }

@@ -1,10 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="OnlineOrderingSystem.Login_Module.homepage" MasterPageFile="~/Login_Module/loginMaster.Master" %>
 
 <asp:Content ID="customerHome" ContentPlaceHolderID="ContentPlaceHolderLogin" runat="server">
-
-    <script>
+<link href="css/loginCSS.css" rel="stylesheet" />
+<script>
         
-        var repeatSlideshow;
+    var repeatSlideshow;
         
     function showSlides()
     {
@@ -72,8 +72,26 @@
         repeatSlideshow = setTimeout(showSlides, 2500);
     }
 
-        </script>
-
+</script>
+    <style type="text/css">
+        a {
+            font-family: 'Poppins';
+            font-weight: 400;
+        }
+        h1 {
+            font-family: 'Poppins';
+            font-weight: 400;
+        }
+        .heading {
+            font-size: 50px;
+            color: black;
+            font-weight: 600;
+            text-align: center;
+            align-items: center;
+            z-index: 1;
+        }
+    </style>
+    <h1 class="heading">Welcome to FoodX</h1>
     <div class="slideshow-container">
 
             <div class="mySlides fade">
@@ -91,7 +109,7 @@
                 <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Amazing arts created with perfection </div>
             </div>
 
-        </div>
+    </div>
         
         <br/>
 
@@ -109,12 +127,12 @@
 
     </div>
 
-    <script>
+<script>
             
-            var slideIndex = 0;
+   var slideIndex = 0;
             
-            showSlides();
+   showSlides();
             
-        </script>
+</script>
 
 </asp:Content>
