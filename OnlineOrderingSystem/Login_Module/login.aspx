@@ -61,7 +61,6 @@
             background-color: white;
             color: black;
             border: 2px solid #555555;
-            margin-top: 25px;
             font-size: 20px;
             font-weight: 600;
             padding-top: 10px;
@@ -70,7 +69,6 @@
             padding-right: 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
             transition: background-color 0.3s, color 0.3s;
         }
         .button:hover {

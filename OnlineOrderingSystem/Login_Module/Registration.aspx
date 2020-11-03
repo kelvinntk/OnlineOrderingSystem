@@ -61,7 +61,6 @@
             padding-right: 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
             transition: background-color 0.3s, color 0.3s;
         }
         .button:hover {

@@ -110,7 +110,7 @@
     <Content Include="Customer_Module\AddToWishlist.aspx" />
     <Content Include="Customer_Module\AllOrder.aspx" />
     <Content Include="Customer_Module\ArtDetailsUserControl.ascx" />
-    <Content Include="Customer_Module\ArtGallery.aspx" />
+    <Content Include="Customer_Module\OnlineOrderingSystem.aspx" />
     <Content Include="Customer_Module\ArtImageUserControl.ascx" />
     <Content Include="Customer_Module\ArtPriceUserControl.ascx" />
     <Content Include="Customer_Module\Cart.aspx" />
@@ -328,12 +328,12 @@
     <Compile Include="Customer_Module\ArtDetailsUserControl.ascx.designer.cs">
       <DependentUpon>ArtDetailsUserControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\ArtGallery.aspx.cs">
-      <DependentUpon>ArtGallery.aspx</DependentUpon>
+    <Compile Include="Customer_Module\OnlineOrderingSystem.aspx.cs">
+      <DependentUpon>OnlineOrderingSystem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\ArtGallery.aspx.designer.cs">
-      <DependentUpon>ArtGallery.aspx</DependentUpon>
+    <Compile Include="Customer_Module\OnlineOrderingSystem.aspx.designer.cs">
+      <DependentUpon>OnlineOrderingSystem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer_Module\ArtImageUserControl.ascx.cs">
       <DependentUpon>ArtImageUserControl.ascx</DependentUpon>

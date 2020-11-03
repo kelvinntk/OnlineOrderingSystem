@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ArtGallery.aspx.cs" Inherits="CustomerModule.Customer_Module.ArtGallery" MasterPageFile="~/Customer_Module/CustomerMasterPage.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OnlineOrderingSystem.aspx.cs" Inherits="CustomerModule.Customer_Module.ArtGallery" MasterPageFile="~/Customer_Module/CustomerMasterPage.Master" %>
 
 <%@ Register TagPrefix="UserControl1" TagName="Header" Src="~/Customer_Module/ArtImageUserControl.ascx" %>
 <%@ Register TagPrefix="UserControl2" TagName="Header" Src="~/Customer_Module/ArtDetailsUserControl.ascx" %>

@@ -35,7 +35,7 @@ namespace OnlineOrderingSystem.Login_Module
                 string email = sdr["Email"] + "";
                 string password = sdr["Password"] + "";
 
-                MailMessage mm =  new MailMessage ("noreply.artgallerysystem@gmail.com", TxtEmail.Text);
+                MailMessage mm =  new MailMessage ("kelvinntk-sm17@student.tarc.edu.my", TxtEmail.Text);
                 mm.Subject = "Your Password !";
                 mm.Body = "Hello, " + email + " is your Email id <br/> your password is " + password;
                 mm.IsBodyHtml = true;
@@ -43,8 +43,8 @@ namespace OnlineOrderingSystem.Login_Module
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
                 NetworkCredential nc = new NetworkCredential();
-                nc.UserName = "noreply.artgallerysystem@gmail.com";
-                nc.Password = "123456ags";
+                nc.UserName = "kelvinntk-sm17@student.tarc.edu.my";
+                nc.Password = "11221999Bb";
 
                 smtp.UseDefaultCredentials = true;
                 smtp.Credentials = nc;
@@ -55,7 +55,7 @@ namespace OnlineOrderingSystem.Login_Module
             }
             else
             {
-                Labelmsg.Text = TxtEmail.Text + "This email ID is not exixts in our database ! ";
+                Labelmsg.Text = TxtEmail.Text + " This email ID is not exixts in our database ! ";
             }
         }
     }

@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="OnlineOrderingSystem.Login_Module.homepage" MasterPageFile="~/Login_Module/loginMaster.Master" %>
 
 <asp:Content ID="customerHome" ContentPlaceHolderID="ContentPlaceHolderLogin" runat="server">
-<link href="css/loginCSS.css" rel="stylesheet" />
+
 <script>
         
     var repeatSlideshow;
@@ -76,7 +76,6 @@
     <style type="text/css">
         a {
             font-family: 'Poppins';
-            font-weight: 400;
         }
         h1 {
             font-family: 'Poppins';
@@ -90,23 +89,44 @@
             align-items: center;
             z-index: 1;
         }
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+            font-size: 20px;
+            font-weight: 600;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background-color: #3FFF33;
+            border: 2px solid #3FFF33;
+            color: white;
+        }
     </style>
+    <br />
     <h1 class="heading">Welcome to FoodX</h1>
+    <br />
     <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <img class="indexWallpaper" src="images/1.jpg" style="width:100%" alt="photo_1" />
-                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Arteria brings enlightenment to you </div>
+                <img class="indexWallpaper" src="images/food.jpg" style="width:100%" alt="photo_1" />
+                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> FoodX Brings Happiness to You </div>
             </div>
 
             <div class="mySlides fade">
-                <img class="indexWallpaper" src="images/2.jpg" style="width:100%" alt="photo_2" />
-                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Great arts awaits </div>
+                <img class="indexWallpaper" src="images/friedRice.jpg" style="width:100%" alt="photo_2" />
+                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> We use wok to cook Egg Fried Rice </div>
             </div>
 
             <div class="mySlides fade">
-                <img class="indexWallpaper" src="images/3.jpg" style="width:100%" alt="photo_3" />
-                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Amazing arts created with perfection </div>
+                <img class="indexWallpaper" src="images/delicous.jpg" style="width:100%" alt="photo_3" />
+                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Delicious Food created with perfection </div>
             </div>
 
     </div>
@@ -123,7 +143,7 @@
 
     <div align="center">
 
-    <asp:Button ID="Button1" runat="server" style="padding:0.3em;" Text="Log In" BackColor="White" BorderColor="Black" BorderStyle="Solid" BorderWidth="0.1em" Font-Size="1.75em" Font-Strikeout="False" ForeColor="Black" OnClick="Button1_Click" />
+    <asp:Button ID="Button1" runat="server" style="padding:0.3em;" class="button" Text="START"  BorderWidth="0.1em" Font-Size="1.75em" Font-Strikeout="False" OnClick="Button1_Click" />
 
     </div>
 

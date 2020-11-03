@@ -77,18 +77,18 @@
     <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <img class="indexWallpaper" src="images/1.jpg" style="width:100%" alt="photo_1" />
-                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Arteria brings enlightenment to you </div>
+                <img class="indexWallpaper" src="images/food.jpg" style="width:100%" alt="photo_1" />
+                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> FoodX Brings Happiness to You </div>
             </div>
 
             <div class="mySlides fade">
-                <img class="indexWallpaper" src="images/2.jpg" style="width:100%" alt="photo_2" />
-                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Great arts awaits </div>
+                <img class="indexWallpaper" src="images/friedRice.jpg" style="width:100%" alt="photo_2" />
+                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> We use wok to cook Egg Fried Rice </div>
             </div>
 
             <div class="mySlides fade">
-                <img class="indexWallpaper" src="images/3.jpg" style="width:100%" alt="photo_3" />
-                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Amazing arts created with perfection </div>
+                <img class="indexWallpaper" src="images/delicous.jpg" style="width:100%" alt="photo_3" />
+                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Delicious Food created with perfection </div>
             </div>
 
         </div>
