@@ -12,7 +12,7 @@
         <center>
             <h1>Who are you? artist or normal customer?</h1>
             <p>
-                <asp:Button ID="Button1" runat="server" Text="Artist" style="width:100px;height:50px;margin-right:100px;" OnClick="Button1_Click"/>
+                <asp:Button ID="Button1" runat="server" Text="Staff" style="width:100px;height:50px;margin-right:100px;" OnClick="Button1_Click"/>
                 <asp:Button ID="Button2" runat="server" Text="Customer" style="width:100px;height:50px;margin-left:100px;" OnClick="Button2_Click"/>
             </p>
             

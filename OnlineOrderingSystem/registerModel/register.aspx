@@ -11,7 +11,7 @@
         <div style="border:solid 1px;width:80%;margin-top:5%;margin-left:10%;background-color:grey;padding-bottom:50px">
         <center>
         <p>
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Create Artist"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Staff Registration"></asp:Label>
         </p>
         <asp:FormView ID="FormView1" runat="server" CellPadding="4" ForeColor="#333333" DefaultMode="Insert" insertMethod="FormView1_insertItem" Style="width:25%">
             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />

@@ -29,9 +29,9 @@ namespace register.registerModel
 
             string select = Session["selectedRegis"].ToString();
 
-            if (select.Equals("artist"))
+            if (select.Equals("staff"))
             {
-                FormView1.DataSourceID = "SqlDataSource1";
+                FormView1.DataSourceID = "SqlDataSource3";
             }
             else if (select.Equals("cust"))
             {

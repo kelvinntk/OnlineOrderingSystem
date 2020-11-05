@@ -78,7 +78,7 @@
                     </ItemTemplate>
                 </asp:FormView>
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Back to Login Page" />
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 1 * FROM Artist  ORDER BY ArtistID DESC ;
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 1 * FROM Staff  ORDER BY StaffID DESC ;
 "></asp:SqlDataSource>
                 <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Back to Register Page" Visible="False" />
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 1 * FROM Customer ORDER BY CustomerID DESC ;

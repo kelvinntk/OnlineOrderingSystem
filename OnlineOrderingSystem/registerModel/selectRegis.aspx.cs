@@ -16,7 +16,7 @@ namespace register.registerModel
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Session["selectedRegis"] = "artist";
+            Session["selectedRegis"] = "staff";
             Response.Redirect("register.aspx");
         }
 

@@ -55,9 +55,9 @@ namespace register.registerModel
             }
 
             regisSelected = Session["selectedRegis"].ToString();
-            if (regisSelected.Equals("artist"))
+            if (regisSelected.Equals("staff"))
             {
-                Label1.Text = "Register as Artist";
+                Label1.Text = "Register as Staff";
             }
             else if (regisSelected.Equals("cust"))
             {
@@ -74,7 +74,7 @@ namespace register.registerModel
 
                 con.Open();
 
-                string queryStr = "SELECT Email FROM Artist";
+                string queryStr = "SELECT Email FROM Staff";
                 SqlCommand command = new SqlCommand(queryStr, con);
                 SqlDataReader dataReader = command.ExecuteReader();
 
@@ -113,14 +113,14 @@ namespace register.registerModel
                 }
                 con.Close();
 
-                if (regisSelected.Equals("artist"))
+                if (regisSelected.Equals("staff"))
                 {
-                    Artist pp = new Artist();
+                    Staff pp = new Staff();
                     TryUpdateModel(pp);
                     if (ModelState.IsValid)
                     {
                         Session["condition"] = "good";
-                        _db.Artists.Add(pp);
+                        _db.Staffs.Add(pp);
                         _db.SaveChanges();
                         Response.Redirect("confirm.aspx");
                     }

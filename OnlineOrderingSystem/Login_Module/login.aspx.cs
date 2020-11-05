@@ -30,9 +30,9 @@ namespace Login_Module.Login_Module
             }
             else
             {
-                bool validArtist = verifyArtist(email, password);
+                bool validStaff = verifyStaff(email, password);
 
-                if (validArtist == true)
+                if (validStaff == true)
                 {
                     Response.Redirect("~/artistModule/artistHome.aspx");
                 }
@@ -85,13 +85,13 @@ namespace Login_Module.Login_Module
             }
         }
 
-        protected bool verifyArtist(string email, string password)
+        protected bool verifyStaff(string email, string password)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
 
             con.Open();
 
-            string queryStr = "SELECT * FROM [Artist] WHERE Email = @Email AND Password = @Password";
+            string queryStr = "SELECT * FROM [Staff] WHERE Email = @Email AND Password = @Password";
 
             SqlCommand command = new SqlCommand(queryStr, con);
 
@@ -104,7 +104,7 @@ namespace Login_Module.Login_Module
             {
                 while (dataReader.Read())
                 {
-                    Session["UserID"] = dataReader["ArtistID"];
+                    Session["UserID"] = dataReader["StaffID"];
 
                     String name = (string)dataReader["First_Name"];
                     Session["name"] = name;
