@@ -17,11 +17,11 @@ namespace CustomerModule.Customer_Module
 
         public void ProcessRequest(HttpContext context)
         {
-            Int32 artID;
+            Int32 itemID;
 
-            if (context.Request.QueryString["ArtID"] != null)
+            if (context.Request.QueryString["ItemID"] != null)
             {
-                artID = Convert.ToInt32(context.Request.QueryString["ArtID"]);
+                itemID = Convert.ToInt32(context.Request.QueryString["ItemID"]);
             }
             else
             {
@@ -30,7 +30,7 @@ namespace CustomerModule.Customer_Module
 
             context.Response.ContentType = "image/jpeg";
 
-            Stream strm = ShowEmpImage(artID);
+            Stream strm = ShowEmpImage(itemID);
 
             byte[] buffer = new byte[4096];
 
@@ -43,19 +43,19 @@ namespace CustomerModule.Customer_Module
             }
         }
 
-        public Stream ShowEmpImage(int artID)
+        public Stream ShowEmpImage(int itemID)
         {
             string conn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
             SqlConnection connection = new SqlConnection(conn);
 
-            string sql = "SELECT Image FROM Art WHERE ArtID = @ArtID";
+            string sql = "SELECT Image FROM Item WHERE ItemID = @ItemID";
 
             SqlCommand cmd = new SqlCommand(sql, connection);
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.Parameters.AddWithValue("@ArtID", artID);
+            cmd.Parameters.AddWithValue("@ItemID", itemID);
 
             connection.Open();
 

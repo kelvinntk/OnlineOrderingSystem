@@ -82,17 +82,7 @@
                     <td style="background-color: rgb(25, 25, 50); vertical-align: middle;">
                         <a href="homepage.aspx"><asp:Image ID="Image1" runat="server" Height="100px" ImageAlign="Left" ImageUrl="~/Login_Module/images/logo.JPEG" /></a>
                         <div class="navbar">
-                          <a href="#home">Home</a>
-                          <a href="#news">Cart</a>
-                          <div class="dropdown">
-                            <button class="dropbtn">Profile 
-                              <i class="fa fa-caret-down"></i>
-                            </button>
-                            <div class="dropdown-content">
-                              <a href="#">Account</a>
-                              <a href="#">Payment History</a>
-                            </div>
-                          </div> 
+                          <a href="~/Login_Module/homepage.aspx">Home</a>
                         </div>
                     </td>
                 </tr>

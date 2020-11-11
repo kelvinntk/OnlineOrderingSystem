@@ -20,14 +20,14 @@
 
                         <UserControl1:Header ID="Header1" runat="server" />
 
-                        <%--<asp:Image ID="Image1" runat="server" ImageUrl='<%# "ShowImage.ashx?ArtID=" + Eval("ArtID") %>' Width="400px" Height="300px" />--%>
+                        <%--<asp:Image ID="Image1" runat="server" ImageUrl='<%# "ShowImage.ashx?ItemID=" + Eval("ItemID") %>' Width="400px" Height="300px" />--%>
                     </td>
 
                     <td style="width: 50%; padding: 1em">
 
                         <UserControl2:Header ID="ctlHeader" runat="server" />
 
-                        <%--<h2><%# Eval ("Art_Name") %></h2>
+                        <%--<h2><%# Eval ("Item_Name") %></h2>
                         <br />
                         By <b> <%# Eval ("First_Name") %> <%# Eval ("Last_Name") %> </b>
                         <br />
@@ -50,18 +50,18 @@
 
                         <br />
                         <br />
-                        <a href="/Customer_Module/AddToCart.aspx?ArtID=<%#: Eval ("ArtID") %>">
+                        <a href="/Customer_Module/AddToCart.aspx?ItemID=<%#: Eval ("ItemID") %>">
                             <input id="Button1" class="buttonStyle" type="button" value="Add To Cart" /></a>
                         <br />
                         <br />
-                        <a href="/Customer_Module/AddToWishlist.aspx?ArtID=<%#: Eval ("ArtID") %>">
-                            <input id="Button2" class="buttonStyle" type="button" value="<%# checkWishlist(Eval("ArtID") + "") %>" /></a>
+                        <a href="/Customer_Module/AddToWishlist.aspx?ItemID=<%#: Eval ("ItemID") %>">
+                            <input id="Button2" class="buttonStyle" type="button" value="<%# checkWishlist(Eval("ItemID") + "") %>" /></a>
 
-                        <%--<a href="/Customer_Module/AddToWishlist.aspx?ArtID=<%#: Eval ("ArtID") %>">               
+                        <%--<a href="/Customer_Module/AddToWishlist.aspx?ItemID=<%#: Eval ("ItemID") %>">               
                                         <input id="Button2" type="button" value="Add to / Remove from Wishlist" />
                                     </a>--%>
 
-                        <%--<asp:HyperLink ID="HyperLink1" runat="server" Text="Add To Cart" NavigateUrl="~/Customer_Module/AddToCart.aspx?ArtID=<%# Eval ("ArtID") %>"></asp:HyperLink>--%>
+                        <%--<asp:HyperLink ID="HyperLink1" runat="server" Text="Add To Cart" NavigateUrl="~/Customer_Module/AddToCart.aspx?ItemID=<%# Eval ("ItemID") %>"></asp:HyperLink>--%>
                         
                     </td>
                 </tr>
@@ -79,15 +79,15 @@
 
     <br />
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT A.* , B.* 
-FROM Art A, Artist B  
+FROM Item A, Staff B  
 WHERE A.NoOfStock &gt; 0 
 AND A.Status = 'AVAILABLE' 
-AND A.ArtistID = B.ArtistID"
-        InsertCommand="INSERT INTO Cart(CustomerID, ArtID, Art_Name, Quantity, Total, ImageName, ImagePath) VALUES (@CustomerID, @ArtID, @Art_Name, 1, @Total, @ImageName, @ImagePath)" UpdateCommand="UPDATE Cart SET Quantity = @Quantity, Total = @Total WHERE CustomerID = @CustomerID AND ArtID = @ArtID">
+AND A.StaffID = B.StaffID"
+        InsertCommand="INSERT INTO Cart(CustomerID, ItemID, Item_Name, Quantity, Total, ImageName, ImagePath) VALUES (@CustomerID, @ItemID, @Item_Name, 1, @Total, @ImageName, @ImagePath)" UpdateCommand="UPDATE Cart SET Quantity = @Quantity, Total = @Total WHERE CustomerID = @CustomerID AND ItemID = @ItemID">
         <InsertParameters>
             <asp:Parameter Name="CustomerID" />
-            <asp:Parameter Name="ArtID" />
-            <asp:Parameter Name="Art_Name" />
+            <asp:Parameter Name="ItemID" />
+            <asp:Parameter Name="Item_Name" />
             <asp:Parameter Name="Total" />
             <asp:Parameter Name="ImageName" />
             <asp:Parameter Name="ImagePath" />
@@ -96,7 +96,7 @@ AND A.ArtistID = B.ArtistID"
             <asp:Parameter Name="Quantity" />
             <asp:Parameter Name="Total" />
             <asp:Parameter Name="CustomerID" />
-            <asp:Parameter Name="ArtID" />
+            <asp:Parameter Name="ItemID" />
         </UpdateParameters>
     </asp:SqlDataSource>
     <br />

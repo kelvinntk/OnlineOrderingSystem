@@ -8,7 +8,7 @@
 
     <br />
 
-    <asp:GridView CssClass="GridViewPadding" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" ID="GridView1" DataKeyNames="CustomerID,ArtID" CellPadding="4" ForeColor="#333333" GridLines="None">
+    <asp:GridView CssClass="GridViewPadding" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" ID="GridView1" DataKeyNames="CustomerID,ItemID" CellPadding="4" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:TemplateField HeaderText="">
@@ -17,12 +17,12 @@
 
                     <UserControl1:Header ID="Header1" runat="server"/>
 
-                    <%--<asp:Image ID="Image1" runat="server" Width="400px" Height="300px" ImageUrl='<%# "ShowImage.ashx?ArtID=" + Eval("ArtID") %>'/>--%>
+                    <%--<asp:Image ID="Image1" runat="server" Width="400px" Height="300px" ImageUrl='<%# "ShowImage.ashx?ItemID=" + Eval("ItemID") %>'/>--%>
                 </ItemTemplate>
 
             </asp:TemplateField>
 
-            <asp:BoundField DataField="Art_Name" HeaderText="Art_Name" SortExpression="Art_Name" />
+            <asp:BoundField DataField="Item_Name" HeaderText="Item_Name" SortExpression="Item_Name" />
             <asp:BoundField DataField="DateAdded" HeaderText="DateAdded" SortExpression="DateAdded" DataFormatString="{0:dd/MM/yyyy}" />
             <asp:BoundField DataField="TimeAdded" HeaderText="TimeAdded" SortExpression="TimeAdded" />
 
@@ -49,14 +49,14 @@
 
     <br />
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM Wishlist WHERE CustomerID = @CustomerID AND ArtID = @ArtID" SelectCommand="SELECT W.CustomerID AS &quot;CustomerID&quot;, W.ArtID AS &quot;ArtID&quot;, W.DateAdded AS &quot;DateAdded&quot;, W.TimeAdded AS &quot;TimeAdded&quot;, 
-A.ArtID AS &quot;ArtID&quot;, A.Art_Name AS &quot;Art_Name&quot;, A.Image AS &quot;Image&quot; 
-FROM Art A, Wishlist W 
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM Wishlist WHERE CustomerID = @CustomerID AND ItemID = @ItemID" SelectCommand="SELECT W.CustomerID AS &quot;CustomerID&quot;, W.ItemID AS &quot;ItemID&quot;, W.DateAdded AS &quot;DateAdded&quot;, W.TimeAdded AS &quot;TimeAdded&quot;, 
+A.ItemID AS &quot;ItemID&quot;, A.Item_Name AS &quot;Item_Name&quot;, A.Image AS &quot;Image&quot; 
+FROM Item A, Wishlist W 
 WHERE W.CustomerID = @CustomerID 
-AND W.ArtID = A.ArtID">
+AND W.ItemID = A.ItemID">
         <DeleteParameters>
             <asp:Parameter Name="CustomerID" />
-            <asp:Parameter Name="ArtID" />
+            <asp:Parameter Name="ItemID" />
         </DeleteParameters>
         <SelectParameters>
             <asp:SessionParameter Name="CustomerID" SessionField="CustomerID" />

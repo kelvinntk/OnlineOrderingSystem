@@ -14,38 +14,38 @@ namespace CustomerModule.Customer_Module
         protected void Page_Load(object sender, EventArgs e)
         {
             string customerID = Session["CustomerID"] + "";
-            string artID = Request.QueryString["ArtID"];
+            string itemID = Request.QueryString["ItemID"];
             
-            int wishlistExist = checkWishlist(customerID, artID);
+            int wishlistExist = checkWishlist(customerID, itemID);
 
             if (wishlistExist == 1)
             {
-                removeWishlist(customerID, artID);
+                removeWishlist(customerID, itemID);
 
-                Response.Write("<script language='javascript'>window.alert('Art Removed from Wishlist');window.location='OnlineOrderingSystem.aspx';</script>");
+                Response.Write("<script language='javascript'>window.alert('Item Removed from Wishlist');window.location='OnlineOrderingSystem.aspx';</script>");
             }
             else
             {
-                insertWishlist(customerID, artID);
+                insertWishlist(customerID, itemID);
 
-                Response.Write("<script language='javascript'>window.alert('Art Added to Wishlist!');window.location='OnlineOrderingSystem.aspx';</script>");
+                Response.Write("<script language='javascript'>window.alert('Item Added to Wishlist!');window.location='OnlineOrderingSystem.aspx';</script>");
             }
             
             //Response.Redirect("OnlineOrderingSystem.aspx");
         }
 
-        protected int checkWishlist(string customerID, string artID)
+        protected int checkWishlist(string customerID, string itemID)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
 
             con.Open();
 
-            string queryStr = "SELECT * FROM [Wishlist] WHERE CustomerID = @CustomerID AND ArtID = @ArtID";
+            string queryStr = "SELECT * FROM [Wishlist] WHERE CustomerID = @CustomerID AND ItemID = @ItemID";
 
             SqlCommand command = new SqlCommand(queryStr, con);
 
             command.Parameters.AddWithValue("@CustomerID", customerID);
-            command.Parameters.AddWithValue("@ArtID", artID);
+            command.Parameters.AddWithValue("@ItemID", itemID);
 
             SqlDataReader dataReader = command.ExecuteReader();
             
@@ -61,13 +61,13 @@ namespace CustomerModule.Customer_Module
             }
         }
         
-        protected void insertWishlist(string customerID, string artID)
+        protected void insertWishlist(string customerID, string itemID)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
 
             con.Open();
 
-            string queryStr = "INSERT INTO Wishlist(CustomerID, ArtID, DateAdded, TimeAdded) VALUES (@CustomerID, @ArtID, @DateAdded, @TimeAdded)";
+            string queryStr = "INSERT INTO Wishlist(CustomerID, ItemID, DateAdded, TimeAdded) VALUES (@CustomerID, @ItemID, @DateAdded, @TimeAdded)";
 
             SqlCommand command = new SqlCommand(queryStr, con);
 
@@ -75,7 +75,7 @@ namespace CustomerModule.Customer_Module
             string currentTime = DateTime.Now.ToString("HH:mm:ss");
             
             command.Parameters.AddWithValue("@CustomerID", Session["CustomerID"]);
-            command.Parameters.AddWithValue("@ArtID", artID);
+            command.Parameters.AddWithValue("@ItemID", itemID);
             command.Parameters.AddWithValue("@DateAdded", currentDate);
             command.Parameters.AddWithValue("@TimeAdded", currentTime);
 
@@ -84,18 +84,18 @@ namespace CustomerModule.Customer_Module
             //con.Close();
         }
 
-        protected void removeWishlist(string customerID, string artID)
+        protected void removeWishlist(string customerID, string itemID)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
 
             con.Open();
 
-            string queryStr = "DELETE FROM Wishlist WHERE CustomerID = @CustomerID AND ArtID = @ArtID";
+            string queryStr = "DELETE FROM Wishlist WHERE CustomerID = @CustomerID AND ItemID = @ItemID";
 
             SqlCommand command = new SqlCommand(queryStr, con);
             
             command.Parameters.AddWithValue("@CustomerID", Session["CustomerID"]);
-            command.Parameters.AddWithValue("@ArtID", artID);
+            command.Parameters.AddWithValue("@ItemID", itemID);
 
             command.ExecuteScalar();
 

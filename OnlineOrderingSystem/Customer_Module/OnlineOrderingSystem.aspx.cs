@@ -16,7 +16,7 @@ namespace CustomerModule.Customer_Module
             //Session["CustomerID"] = "1001";
         }
 
-        protected string checkWishlist(string artID)
+        protected string checkWishlist(string itemID)
         {
             string customerID = Session["CustomerID"] + "";
 
@@ -24,12 +24,12 @@ namespace CustomerModule.Customer_Module
 
             con.Open();
 
-            string queryStr = "SELECT * FROM [Wishlist] WHERE CustomerID = @CustomerID AND ArtID = @ArtID";
+            string queryStr = "SELECT * FROM [Wishlist] WHERE CustomerID = @CustomerID AND ItemID = @ItemID";
 
             SqlCommand command = new SqlCommand(queryStr, con);
 
             command.Parameters.AddWithValue("@CustomerID", customerID);
-            command.Parameters.AddWithValue("@ArtID", artID);
+            command.Parameters.AddWithValue("@ItemID", itemID);
 
             SqlDataReader dataReader = command.ExecuteReader();
 

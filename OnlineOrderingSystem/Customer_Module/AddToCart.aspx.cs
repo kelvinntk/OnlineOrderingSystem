@@ -14,9 +14,9 @@ namespace CustomerModule.Customer_Module
         protected void Page_Load(object sender, EventArgs e)
         {
             string customerID = Session["CustomerID"] + "";
-            string artID = Request.QueryString["ArtID"];
+            string itemID = Request.QueryString["ItemID"];
 
-            SqlDataReader noOfStockReader = selectArt(artID);
+            SqlDataReader noOfStockReader = selectArt(itemID);
 
             int noOfStock = 0;
 
@@ -25,15 +25,15 @@ namespace CustomerModule.Customer_Module
                 noOfStock = Convert.ToInt32(noOfStockReader["NoOfStock"]);
             }
 
-            int cartQuantity = checkCart(customerID, artID);
+            int cartQuantity = checkCart(customerID, itemID);
 
             int balance = noOfStock - cartQuantity;
 
             if (balance > 0)
             {
-                SqlDataReader artReader = selectArt(artID);
+                SqlDataReader artReader = selectArt(itemID);
 
-                int cartItemExist = checkCart(customerID, artID);
+                int cartItemExist = checkCart(customerID, itemID);
 
                 if (cartItemExist != 0)
                 {
@@ -48,33 +48,33 @@ namespace CustomerModule.Customer_Module
 
                     double total = price * quantity;
 
-                    updateArt(customerID, artID, quantity + "", total + "");
+                    updateArt(customerID, itemID, quantity + "", total + "");
                 }
                 else
                 {
-                    insertArt(customerID, artID, artReader);
+                    insertArt(customerID, itemID, artReader);
                 }
 
-                Response.Write("<script language='javascript'>window.alert('Art Successfully Added to Cart!');window.location='OnlineOrderingSystem.aspx';</script>");
+                Response.Write("<script language='javascript'>window.alert('Item Successfully Added to Cart!');window.location='OnlineOrderingSystem.aspx';</script>");
             }
             else
             {
-                Response.Write("<script language='javascript'>window.alert('ERROR! Art Stock Not Enough!');window.location='OnlineOrderingSystem.aspx';</script>");
+                Response.Write("<script language='javascript'>window.alert('ERROR! Item Stock Not Enough!');window.location='OnlineOrderingSystem.aspx';</script>");
             }
         }
 
-        protected int checkCart(string customerID, string artID)
+        protected int checkCart(string customerID, string itemID)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
 
             con.Open();
 
-            string queryStr = "SELECT * FROM [Cart] WHERE CustomerID = @CustomerID AND ArtID = @ArtID";
+            string queryStr = "SELECT * FROM [Cart] WHERE CustomerID = @CustomerID AND ItemID = @ItemID";
 
             SqlCommand command = new SqlCommand(queryStr, con);
 
             command.Parameters.AddWithValue("@CustomerID", customerID);
-            command.Parameters.AddWithValue("@ArtID", artID);
+            command.Parameters.AddWithValue("@ItemID", itemID);
 
             SqlDataReader dataReader = command.ExecuteReader();
 
@@ -90,17 +90,17 @@ namespace CustomerModule.Customer_Module
             return qty;
         }
 
-        protected SqlDataReader selectArt(string artID)
+        protected SqlDataReader selectArt(string itemID)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
 
             con.Open();
             
-            string queryStr = "SELECT * FROM [Art] WHERE ArtID = @ArtID";
+            string queryStr = "SELECT * FROM [Item] WHERE ItemID = @ItemID";
 
             SqlCommand command = new SqlCommand(queryStr, con);
             
-            command.Parameters.AddWithValue("@ArtID", artID);
+            command.Parameters.AddWithValue("@ItemID", itemID);
 
             SqlDataReader dataReader = command.ExecuteReader();
             
@@ -109,21 +109,21 @@ namespace CustomerModule.Customer_Module
             return dataReader;
         }
 
-        protected void insertArt(string customerID, string artID, SqlDataReader dataReader)
+        protected void insertArt(string customerID, string itemID, SqlDataReader dataReader)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
             
             con.Open();
 
-            string queryStr = "INSERT INTO Cart(CustomerID, ArtID, Art_Name, Price, Quantity, Image) VALUES (@CustomerID, @ArtID, @Art_Name, @Price, 1, @Image)";
+            string queryStr = "INSERT INTO Cart(CustomerID, ItemID, Item_Name, Price, Quantity, Image) VALUES (@CustomerID, @ItemID, @Item_Name, @Price, 1, @Image)";
 
             SqlCommand command = new SqlCommand(queryStr, con);
             
             while (dataReader.Read())
             {
                 command.Parameters.AddWithValue("@CustomerID", Session["CustomerID"]);
-                command.Parameters.AddWithValue("@ArtID", artID);
-                command.Parameters.AddWithValue("@Art_Name", dataReader["Art_Name"]);
+                command.Parameters.AddWithValue("@ItemID", itemID);
+                command.Parameters.AddWithValue("@Item_Name", dataReader["Item_Name"]);
                 command.Parameters.AddWithValue("@Price", dataReader["Price"]);
                 command.Parameters.AddWithValue("@Quantity", 1);
                 //command.Parameters.AddWithValue("@Total", dataReader["Price"]);
@@ -135,37 +135,37 @@ namespace CustomerModule.Customer_Module
             //con.Close();
         }
 
-        protected void updateArt(string customerID, string artID, string quantity, string total)
+        protected void updateArt(string customerID, string itemID, string quantity, string total)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
 
             con.Open();
 
-            string queryStr = "UPDATE Cart SET Quantity = @Quantity WHERE CustomerID = @CustomerID AND ArtID = @ArtID";
+            string queryStr = "UPDATE Cart SET Quantity = @Quantity WHERE CustomerID = @CustomerID AND ItemID = @ItemID";
 
             SqlCommand command = new SqlCommand(queryStr, con);
             
             command.Parameters.AddWithValue("@Quantity", quantity);
             //command.Parameters.AddWithValue("@Total", total);
             command.Parameters.AddWithValue("@CustomerID", Session["CustomerID"]);
-            command.Parameters.AddWithValue("@ArtID", artID);
+            command.Parameters.AddWithValue("@ItemID", itemID);
 
             command.ExecuteScalar();
 
             //con.Close();
         }
 
-        protected int selectStock(string artID)
+        protected int selectStock(string itemID)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
 
             con.Open();
 
-            string queryStr = "SELECT * FROM [Art] WHERE ArtID = @ArtID";
+            string queryStr = "SELECT * FROM [Item] WHERE ItemID = @ItemID";
 
             SqlCommand command = new SqlCommand(queryStr, con);
             
-            command.Parameters.AddWithValue("@ArtID", artID);
+            command.Parameters.AddWithValue("@ItemID", itemID);
 
             SqlDataReader dataReader = command.ExecuteReader();
 
@@ -181,18 +181,18 @@ namespace CustomerModule.Customer_Module
             return stock;
         }
 
-        protected void updateStock(int noOfStock, string artID)
+        protected void updateStock(int noOfStock, string itemID)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
 
             con.Open();
 
-            string queryStr = "UPDATE Art SET NoOfStock = @NoOfStock WHERE ArtID = @ArtID";
+            string queryStr = "UPDATE Item SET NoOfStock = @NoOfStock WHERE ItemID = @ItemID";
 
             SqlCommand command = new SqlCommand(queryStr, con);
 
             command.Parameters.AddWithValue("@NoOfStock", noOfStock);
-            command.Parameters.AddWithValue("@ArtID", artID);
+            command.Parameters.AddWithValue("@ItemID", itemID);
 
             command.ExecuteScalar();
 

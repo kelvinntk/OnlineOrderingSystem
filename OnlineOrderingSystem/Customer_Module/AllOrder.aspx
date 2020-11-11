@@ -35,12 +35,12 @@
                 </asp:GridView>
             </td>
             <td style="vertical-align: top; padding-left: 1em;">
-                <asp:GridView ID="GridView2" CssClass="GridViewPadding" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="OrderID,ArtID" DataSourceID="SqlDataSource2" CellPadding="4" ForeColor="#333333" GridLines="Vertical">
+                <asp:GridView ID="GridView2" CssClass="GridViewPadding" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="OrderID,ItemID" DataSourceID="SqlDataSource2" CellPadding="4" ForeColor="#333333" GridLines="Vertical">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
                         <%--<asp:BoundField DataField="OrderID" HeaderText="Order ID" ReadOnly="True" SortExpression="OrderID" />--%>
-                        <asp:BoundField DataField="ArtID" HeaderText="Art ID" ReadOnly="True" SortExpression="ArtID" />
-                        <asp:BoundField DataField="Art_Name" HeaderText="Art Name" ReadOnly="True" SortExpression="ArtID" />
+                        <asp:BoundField DataField="ItemID" HeaderText="Item ID" ReadOnly="True" SortExpression="ItemID" />
+                        <asp:BoundField DataField="Item_Name" HeaderText="Item Name" ReadOnly="True" SortExpression="ItemID" />
                         <asp:BoundField DataField="Price" HeaderText="Price (RM)" SortExpression="Price" DataFormatString="{0:n}" HtmlEncode="False" />
                         <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
                         <asp:BoundField DataField="Total" HeaderText="Total (RM)" ReadOnly="True" SortExpression="Total" DataFormatString="{0:0.00}" HtmlEncode="False" />
