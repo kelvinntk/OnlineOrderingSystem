@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace adminModel.adminModel
+namespace OnlineOrderingSystem.staffModule
 {
-    public partial class adminHome : System.Web.UI.Page
+    public partial class goodMorning : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["adstaffid"] = "";
-            Session["adcustid"] = "";
+
         }
     }
 }

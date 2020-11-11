@@ -5,14 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace adminModel.adminModel
+namespace ItemModule
 {
-    public partial class adminHome : System.Web.UI.Page
+    public partial class viewDeletedItem : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["adstaffid"] = "";
-            Session["adcustid"] = "";
+
         }
+
+     
     }
 }

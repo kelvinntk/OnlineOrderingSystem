@@ -4,15 +4,20 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+//using ArtGallery.registerModel;
+using System.IO;
 
-namespace adminModel.adminModel
+namespace ItemModule
 {
-    public partial class adminHome : System.Web.UI.Page
+    public partial class viewItem : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["adstaffid"] = "";
-            Session["adcustid"] = "";
+
         }
+
     }
 }

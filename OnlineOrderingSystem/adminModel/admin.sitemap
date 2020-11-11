@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="~/adminModel/adminHome.aspx" title="homepage"  description="homepage">
-    <siteMapNode url="~/adminModel/viewArtist.aspx" title="viewArtist"  description="view">
-      <siteMapNode url="~/adminModel/selectedArtist.aspx" title="artist selected"  description="Artist selected">
-        <siteMapNode url="~/adminModel/showArt.aspx" title="Art" description="=Art"></siteMapNode>
+    <siteMapNode url="~/adminModel/viewStaff.aspx" title="viewStaff"  description="view">
+      <siteMapNode url="~/adminModel/selectedStaff.aspx" title="staff selected"  description="Staff selected">
+        <siteMapNode url="~/adminModel/showItem.aspx" title="Item" description="=Item"></siteMapNode>
       </siteMapNode>
     </siteMapNode>
 

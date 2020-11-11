@@ -15,7 +15,7 @@
     <AssemblyName>OnlineOrderingSystem</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>true</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -81,27 +81,16 @@
     <Content Include="adminModel\adminHome.aspx" />
     <Content Include="adminModel\adminHome.css" />
     <Content Include="adminModel\orderDetail.aspx" />
-    <Content Include="adminModel\selectedArtist.aspx" />
+    <Content Include="adminModel\selectedStaff.aspx" />
     <Content Include="adminModel\selectedCust.aspx" />
-    <Content Include="adminModel\showArt.aspx" />
+    <Content Include="adminModel\showItem.aspx" />
     <Content Include="adminModel\showOrder.aspx" />
-    <Content Include="adminModel\viewArtist.aspx" />
+    <Content Include="adminModel\viewStaff.aspx" />
     <Content Include="adminModel\viewCust.aspx" />
     <Content Include="App_Data\ArtGalleryDB.mdf" />
     <Content Include="App_Data\ArtGalleryDB_log.ldf">
       <DependentUpon>ArtGalleryDB.mdf</DependentUpon>
     </Content>
-    <Content Include="artistModule\addItem.aspx" />
-    <Content Include="artistModule\artistHome.aspx" />
-    <Content Include="artistModule\artmst.css" />
-    <Content Include="artistModule\goodAfternoon.ascx" />
-    <Content Include="artistModule\goodMorning.ascx" />
-    <Content Include="artistModule\goodNight.ascx" />
-    <Content Include="artistModule\img\after.png" />
-    <Content Include="artistModule\img\future.jpg" />
-    <Content Include="artistModule\img\mid.jpg" />
-    <Content Include="artistModule\img\morning.png" />
-    <Content Include="artistModule\img\night.jpg" />
     <Content Include="Customer_Module\AbstractAddToCart.aspx" />
     <Content Include="Customer_Module\AbstractAddToWishlist.aspx" />
     <Content Include="Customer_Module\AbstractArt.aspx" />
@@ -169,6 +158,27 @@
     </Content>
     <Content Include="registerModel\register.aspx" />
     <Content Include="registerModel\selectRegis.aspx" />
+    <Content Include="staffModule\addItem.aspx" />
+    <Content Include="staffModule\staffHome.aspx" />
+    <Content Include="staffModule\artmst.css" />
+    <Content Include="staffModule\Global.asax" />
+    <Content Include="staffModule\goodAfternoon.ascx" />
+    <Content Include="staffModule\goodMorning.ascx" />
+    <Content Include="staffModule\goodNight.ascx" />
+    <Content Include="staffModule\img\after.png" />
+    <Content Include="staffModule\img\future.jpg" />
+    <Content Include="staffModule\img\logo.jpeg" />
+    <Content Include="staffModule\img\mid.jpg" />
+    <Content Include="staffModule\img\morning.png" />
+    <Content Include="staffModule\img\night.jpg" />
+    <Content Include="staffModule\itemDetails.aspx" />
+    <Content Include="staffModule\midNight.ascx" />
+    <Content Include="staffModule\modifyItem.ascx" />
+    <Content Include="staffModule\profile.aspx" />
+    <Content Include="staffModule\updProfile.aspx" />
+    <Content Include="staffModule\viewDeletedItem.aspx" />
+    <Content Include="staffModule\viewItem.aspx" />
+    <Content Include="staffModule\WebUserControl1.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -195,12 +205,12 @@
     <Compile Include="adminModel\orderDetail.aspx.designer.cs">
       <DependentUpon>orderDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="adminModel\selectedArtist.aspx.cs">
-      <DependentUpon>selectedArtist.aspx</DependentUpon>
+    <Compile Include="adminModel\selectedStaff.aspx.cs">
+      <DependentUpon>selectedStaff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="adminModel\selectedArtist.aspx.designer.cs">
-      <DependentUpon>selectedArtist.aspx</DependentUpon>
+    <Compile Include="adminModel\selectedStaff.aspx.designer.cs">
+      <DependentUpon>selectedStaff.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminModel\selectedCust.aspx.cs">
       <DependentUpon>selectedCust.aspx</DependentUpon>
@@ -209,12 +219,12 @@
     <Compile Include="adminModel\selectedCust.aspx.designer.cs">
       <DependentUpon>selectedCust.aspx</DependentUpon>
     </Compile>
-    <Compile Include="adminModel\showArt.aspx.cs">
-      <DependentUpon>showArt.aspx</DependentUpon>
+    <Compile Include="adminModel\showItem.aspx.cs">
+      <DependentUpon>showItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="adminModel\showArt.aspx.designer.cs">
-      <DependentUpon>showArt.aspx</DependentUpon>
+    <Compile Include="adminModel\showItem.aspx.designer.cs">
+      <DependentUpon>showItem.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminModel\showOrder.aspx.cs">
       <DependentUpon>showOrder.aspx</DependentUpon>
@@ -223,12 +233,12 @@
     <Compile Include="adminModel\showOrder.aspx.designer.cs">
       <DependentUpon>showOrder.aspx</DependentUpon>
     </Compile>
-    <Compile Include="adminModel\viewArtist.aspx.cs">
-      <DependentUpon>viewArtist.aspx</DependentUpon>
+    <Compile Include="adminModel\viewStaff.aspx.cs">
+      <DependentUpon>viewStaff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="adminModel\viewArtist.aspx.designer.cs">
-      <DependentUpon>viewArtist.aspx</DependentUpon>
+    <Compile Include="adminModel\viewStaff.aspx.designer.cs">
+      <DependentUpon>viewStaff.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminModel\viewCust.aspx.cs">
       <DependentUpon>viewCust.aspx</DependentUpon>
@@ -236,41 +246,6 @@
     </Compile>
     <Compile Include="adminModel\viewCust.aspx.designer.cs">
       <DependentUpon>viewCust.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="artistModule\addItem.aspx.cs">
-      <DependentUpon>addItem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="artistModule\addItem.aspx.designer.cs">
-      <DependentUpon>addItem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="artistModule\artist.Master.cs">
-      <DependentUpon>artist.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="artistModule\artist.Master.designer.cs">
-      <DependentUpon>artist.Master</DependentUpon>
-    </Compile>
-    <Compile Include="artistModule\artistHome.aspx.cs">
-      <DependentUpon>artistHome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="artistModule\artistHome.aspx.designer.cs">
-      <DependentUpon>artistHome.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="artistModule\goodAfternoon.ascx.cs">
-      <DependentUpon>goodAfternoon.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="artistModule\goodAfternoon.ascx.designer.cs">
-      <DependentUpon>goodAfternoon.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="artistModule\goodMorning.ascx.cs">
-      <DependentUpon>goodMorning.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="artistModule\goodMorning.ascx.designer.cs">
-      <DependentUpon>goodMorning.ascx</DependentUpon>
     </Compile>
     <Compile Include="Customer_Module\AbstractAddToCart.aspx.cs">
       <DependentUpon>AbstractAddToCart.aspx</DependentUpon>
@@ -587,14 +562,113 @@
     <Compile Include="registerModel\Staff.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="staffModule\addItem.aspx.cs">
+      <DependentUpon>addItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\addItem.aspx.designer.cs">
+      <DependentUpon>addItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\staff.Master.cs">
+      <DependentUpon>staff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\staff.Master.designer.cs">
+      <DependentUpon>staff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\staffHome.aspx.cs">
+      <DependentUpon>staffHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\staffHome.aspx.designer.cs">
+      <DependentUpon>staffHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\goodAfternoon.ascx.cs">
+      <DependentUpon>goodAfternoon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\goodAfternoon.ascx.designer.cs">
+      <DependentUpon>goodAfternoon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\goodMorning.ascx.cs">
+      <DependentUpon>goodMorning.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\goodMorning.ascx.designer.cs">
+      <DependentUpon>goodMorning.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\goodNight.ascx.cs">
+      <DependentUpon>goodNight.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\goodNight.ascx.designer.cs">
+      <DependentUpon>goodNight.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\itemDetails.aspx.cs">
+      <DependentUpon>itemDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\itemDetails.aspx.designer.cs">
+      <DependentUpon>itemDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\midNight.ascx.cs">
+      <DependentUpon>midNight.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\midNight.ascx.designer.cs">
+      <DependentUpon>midNight.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\modifyItem.ascx.cs">
+      <DependentUpon>modifyItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\modifyItem.ascx.designer.cs">
+      <DependentUpon>modifyItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\updProfile.aspx.cs">
+      <DependentUpon>updProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\updProfile.aspx.designer.cs">
+      <DependentUpon>updProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\viewDeletedItem.aspx.cs">
+      <DependentUpon>viewDeletedItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\viewDeletedItem.aspx.designer.cs">
+      <DependentUpon>viewDeletedItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\viewItem.aspx.cs">
+      <DependentUpon>viewItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\viewItem.aspx.designer.cs">
+      <DependentUpon>viewItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="staffModule\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="staffModule\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Customer_Module\CustomerMasterPage.Master" />
     <Content Include="Customer_Module\CustomerSiteMap.sitemap" />
     <Content Include="Customer_Module\ShowImage.ashx" />
     <Content Include="Login_Module\loginMaster.Master" />
-    <Content Include="artistModule\artist.Master" />
-    <Content Include="artistModule\artist.sitemap" />
     <Content Include="adminModel\admin.sitemap" />
     <Content Include="adminModel\adminMst.Master" />
     <None Include="packages.config" />
@@ -605,11 +679,14 @@
     <Content Include="registerModel\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="staffModule\staff.Master" />
+    <Content Include="staffModule\staff.sitemap" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>

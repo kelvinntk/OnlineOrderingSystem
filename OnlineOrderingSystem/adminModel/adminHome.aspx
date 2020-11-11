@@ -18,7 +18,7 @@
         }
     </style>
     <div Style="margin-top:10%">
-        <a href="viewArtist.aspx" class="frst">View Artist</a>
+        <a href="viewStaff.aspx" class="frst">View Staff</a>
         <a href="viewCust.aspx" class="scd">View Customer</a>
     </div>
 </asp:Content>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="staffModule/staffHome.aspx" title="HomePage"  description="HomePage">
+    <siteMapNode url="staffModule/addItem.aspx" title="AddItem"  description="AddItem" />
+    <siteMapNode url="staffModule/viewItem.aspx" title="ViewItem"  description="ViewItem">
+      <siteMapNode url="staffModule/itemDetails.aspx" title="ItemDetail"  description="ItemDetail" />
+      </siteMapNode>
+    <siteMapNode url="staffModule/viewDeletedItem.aspx" title="DeletedItem" description="DeletedItem"/>
+    <siteMapNode url="staffModule/profile.aspx" title="Profile"  description="Profile" >
+      <siteMapNode url="staffModule/updProfile.aspx" title="Update"  description="Update Profile" />
+      </siteMapNode>
+  </siteMapNode>
+</siteMap>
