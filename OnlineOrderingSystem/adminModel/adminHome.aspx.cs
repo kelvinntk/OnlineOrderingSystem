@@ -14,5 +14,14 @@ namespace adminModel.adminModel
             Session["adstaffid"] = "";
             Session["adcustid"] = "";
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("viewStaff.aspx");
+        }
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("viewCust.aspx");
+        }
     }
 }

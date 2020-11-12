@@ -33,4 +33,51 @@
             <asp:SessionParameter Name="StaffID" SessionField="adstaffid" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
+
+    <%--<script type=”text/javascript”>
+        function printGrid() {
+        var gridData = document.getElementById(‘<%= GridView1.ClientID %>‘);
+        var windowUrl = ‘about:blank’; set print document name for gridview
+        var uniqueName = new Date();
+        var windowName = ‘Print_’ + uniqueName.getTime();
+        var prtWindow = window.open(windowUrl, windowName,
+        ‘left=100,top=100,right=100,bottom=100,width=700,height=500’);
+        prtWindow.document.write(‘<html><head></head>’);
+        prtWindow.document.write(‘<body style=”background:none !important”>’);
+        prtWindow.document.write(gridData.outerHTML);
+        prtWindow.document.write(‘</body></html>’);
+        prtWindow.document.close();
+        prtWindow.focus();
+        prtWindow.print();
+        prtWindow.close();
+        }
+    </script>--%>
+    <script>
+        function doPrint()
+        {
+            var prtContent = document.getElementById('<%= GridView1.ClientID %>');
+            prtContent.border = 0; //set no border here
+            var WinPrint = window.open('','','left=100,top=100,width=1000,height=1000,toolbar=0,scrollbars=1,status=0,resizable=1');
+            WinPrint.document.write(prtContent.outerHTML);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+            WinPrint.close();
+        }
+</script>
+
+        <asp:Button ID="btnPrint" runat="server" Text="Print Report" ForeColor="#0066FF" OnClientClick="doPrint()" />
+
+<%--    <script language="javascript" type="text/javascript">
+        function PrintPage() {
+            var printContent = document.getElementById
+           <%-- ('<%= GridView1.ArtID %>');-
+            var printWindow = window.open("All Records", 
+            "Print Panel", 'left=50000,top=50000,width=0,height=0');
+            printWindow.document.write(printContent.innerHTML);
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();--%>
+     
+
 </asp:Content>

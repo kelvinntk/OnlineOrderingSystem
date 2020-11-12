@@ -200,7 +200,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
             con.Open();
 
-            string queryStr = "INSERT INTO Order_Details(OrderID, ArtID, Art_Name, Price, Quantity) VALUES (@OrderID, @ArtID, @Art_Name, @Price, @Quantity)";
+            string queryStr = "INSERT INTO Order_Details(OrderID, ItemID, Item_Name, Price, Quantity) VALUES (@OrderID, @ItemID, @Item_Name, @Price, @Quantity)";
 
             SqlCommand command = new SqlCommand(queryStr, con);
 
@@ -209,8 +209,8 @@ namespace OnlineOrderingSystem.Customer_Module
                 command.Parameters.Clear();
 
                 command.Parameters.AddWithValue("@OrderID", orderID);
-                command.Parameters.AddWithValue("@ArtID", dataReader["ArtID"]);
-                command.Parameters.AddWithValue("@Art_Name", dataReader["Art_Name"]);
+                command.Parameters.AddWithValue("@ItemID", dataReader["ItemID"]);
+                command.Parameters.AddWithValue("@Item_Name", dataReader["Item_Name"]);
                 command.Parameters.AddWithValue("@Price", dataReader["Price"]);
                 command.Parameters.AddWithValue("@Quantity", dataReader["Quantity"]);
                 //command.Parameters.AddWithValue("@Total", dataReader["Total"]);
@@ -248,12 +248,12 @@ namespace OnlineOrderingSystem.Customer_Module
 
                 con.Open();
 
-                string queryStr = "UPDATE Art SET NoOfStock = NoOfStock - @Quantity WHERE ArtID = @ArtID";
+                string queryStr = "UPDATE Item SET NoOfStock = NoOfStock - @Quantity WHERE ItemID = @ItemID";
 
                 SqlCommand command = new SqlCommand(queryStr, con);
 
                 command.Parameters.AddWithValue("@Quantity", dataReader["Quantity"]);
-                command.Parameters.AddWithValue("@ArtID", dataReader["ArtID"]);
+                command.Parameters.AddWithValue("@ItemID", dataReader["ItemID"]);
 
                 command.ExecuteScalar();
             }
@@ -363,7 +363,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
             //sb.Append("<th style = 'background-color: #D20B0C;>");
             sb.Append("<th align='center'>");
-            sb.Append("<b>Art Name</b>");
+            sb.Append("<b>Item Name</b>");
             sb.Append("</th>");
 
             sb.Append("<th align='center'>");
@@ -385,7 +385,7 @@ namespace OnlineOrderingSystem.Customer_Module
                 sb.Append("<tr>");
 
                 sb.Append("<td>");
-                sb.Append(dataReader["Art_Name"]);
+                sb.Append(dataReader["Item_Name"]);
                 sb.Append("</td>");
 
                 sb.Append("<td>");
@@ -467,7 +467,7 @@ namespace OnlineOrderingSystem.Customer_Module
                 byte[] bytes = memoryStream.ToArray();
                 memoryStream.Close();
 
-                MailMessage mm = new MailMessage("noreply.artgallerysystem@gmail.com", email);
+                MailMessage mm = new MailMessage("duckb532@gmail.com", email);
                 mm.Subject = "Invoice";
                 mm.Body = "Your invoice";
                 mm.Attachments.Add(new Attachment(new MemoryStream(bytes), "Invoice_" + orderID + ".pdf"));
@@ -476,8 +476,8 @@ namespace OnlineOrderingSystem.Customer_Module
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
                 NetworkCredential nc = new NetworkCredential();
-                nc.UserName = "noreply.artgallerysystem@gmail.com";
-                nc.Password = "123456ags";
+                nc.UserName = "duckb532@gmail.com";
+                nc.Password = "Kaixing0831";
 
                 smtp.UseDefaultCredentials = true;
                 smtp.Credentials = nc;

@@ -13,5 +13,19 @@ namespace OnlineOrderingSystem.adminModel
         {
 
         }
+
+        protected void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+        protected void btnPrintFromCodeBehind_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "printGrid", "printGrid();", true);
+            }
+            catch { }
+        }
+
     }
 }

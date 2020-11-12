@@ -86,10 +86,10 @@
     <br />
     <br />
 
-    <asp:GridView ID="GridView1" CssClass="GridViewPadding" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="OrderID,ArtID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="Vertical" Width="90%">
+    <asp:GridView ID="GridView1" CssClass="GridViewPadding" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="OrderID,ItemID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="Vertical" Width="90%">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
-            <asp:BoundField DataField="Art_Name" HeaderText="Art Name" SortExpression="Art_Name" />
+            <asp:BoundField DataField="Item_Name" HeaderText="Item Name" SortExpression="Item_Name" />
             <asp:BoundField DataField="Price" HeaderText="Price (RM)" SortExpression="Price" DataFormatString="{0:n}" HtmlEncode="False" />
             <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
             <asp:BoundField DataField="Total" HeaderText="Total (RM)" ReadOnly="True" SortExpression="Total" DataFormatString="{0:n}" HtmlEncode="False" />

@@ -22,5 +22,14 @@ namespace adminModel.adminModel
 
             Response.Redirect("selectedStaff.aspx");
         }
+        protected void btnPrintFromCodeBehind_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "printGrid", "printGrid();", true);
+            }
+            catch { }
+        }
     }
 }

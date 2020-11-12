@@ -34,7 +34,7 @@ namespace Login_Module.Login_Module
 
                 if (validStaff == true)
                 {
-                    Response.Redirect("~/artistModule/artistHome.aspx");
+                    Response.Redirect("~/staffModule/staffHome.aspx");
                 }
                 else
                 {

@@ -22,5 +22,14 @@ namespace OnlineOrderingSystem.adminModel
 
             Response.Redirect("orderDetail.aspx");
         }
+        protected void btnPrintFromCodeBehind_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "printGrid", "printGrid();", true);
+            }
+            catch { }
+        }
     }
 }

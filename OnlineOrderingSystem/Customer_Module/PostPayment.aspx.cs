@@ -243,7 +243,7 @@ namespace OnlineOrderingSystem.Customer_Module
             StringBuilder sb = new StringBuilder();
 
             sb.Append("<table width='100%' cellspacing='0' cellpadding='2'>");
-            sb.Append("<tr><td align='center' colspan = '2'><h1>ARTERIA</h1><br/>&nbsp;</td></tr>");
+            sb.Append("<tr><td align='center' colspan = '2'><h1>FOOD X</h1><br/>&nbsp;</td></tr>");
             sb.Append("<tr><td align='center' colspan = '2'><h1><b>Invoice</b></h1></td></tr>");
             //sb.Append("<tr><td align='center' style='background-color: #18B5F0' colspan = '2'><b></b></td></tr>");
 
@@ -321,7 +321,7 @@ namespace OnlineOrderingSystem.Customer_Module
                 sb.Append("<tr>");
 
                 sb.Append("<td>");
-                sb.Append(dataReaderOrderDetails["Art_Name"]);
+                sb.Append(dataReaderOrderDetails["Item_Name"]);
                 sb.Append("</td>");
 
                 sb.Append("<td>");
