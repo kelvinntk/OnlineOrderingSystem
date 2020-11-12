@@ -8,10 +8,10 @@
 
     <siteMapNode url="Customer_Module/OnlineOrderingSystem.aspx" title="Menu"  description="">
 
-      <siteMapNode url="Customer_Module/AbstractArt.aspx" title="Abstract"  description="" />
-      <siteMapNode url="Customer_Module/IllustrationArt.aspx" title="Illustration"  description="" />
-      <siteMapNode url="Customer_Module/PaintingArt.aspx" title="Painting"  description="" />
-      <siteMapNode url="Customer_Module/UnavailableArt.aspx" title="Unavailable"  description="" />
+      <siteMapNode url="Customer_Module/Meal.aspx" title="Meal"  description="" />
+      <siteMapNode url="Customer_Module/Beverage.aspx" title="Beverage"  description="" />
+      <siteMapNode url="Customer_Module/Snack.aspx" title="Snack"  description="" />
+      <siteMapNode url="Customer_Module/Bakery.aspx" title="Bakery"  description="" />
 
     </siteMapNode>
 

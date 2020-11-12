@@ -92,9 +92,10 @@
     <Content Include="App_Data\ArtGalleryDB_log.ldf">
       <DependentUpon>ArtGalleryDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Customer_Module\AbstractAddToCart.aspx" />
-    <Content Include="Customer_Module\AbstractAddToWishlist.aspx" />
-    <Content Include="Customer_Module\AbstractArt.aspx" />
+    <Content Include="Customer_Module\BakeryAddToCart.aspx" />
+    <Content Include="Customer_Module\MealAddToCart.aspx" />
+    <Content Include="Customer_Module\MealAddToWishlist.aspx" />
+    <Content Include="Customer_Module\Meal.aspx" />
     <Content Include="Customer_Module\Address.aspx" />
     <Content Include="Customer_Module\AddToCart.aspx" />
     <Content Include="Customer_Module\AddToWishlist.aspx" />
@@ -111,9 +112,9 @@
     <Content Include="Customer_Module\CustomerHome.aspx" />
     <Content Include="Customer_Module\CustomerProfile.aspx" />
     <Content Include="Customer_Module\CustomerWebFormMasterPage.aspx" />
-    <Content Include="Customer_Module\IllustrationAddToCart.aspx" />
-    <Content Include="Customer_Module\IllustrationAddToWishlist.aspx" />
-    <Content Include="Customer_Module\IllustrationArt.aspx" />
+    <Content Include="Customer_Module\BeverageAddToCart.aspx" />
+    <Content Include="Customer_Module\BeverageAddToWishlist.aspx" />
+    <Content Include="Customer_Module\Beverage.aspx" />
     <Content Include="Customer_Module\images\1.jpg" />
     <Content Include="Customer_Module\images\2.jpg" />
     <Content Include="Customer_Module\images\3.jpg" />
@@ -123,13 +124,13 @@
     <Content Include="Customer_Module\images\Visa_logo.png" />
     <Content Include="Customer_Module\LogOut.aspx" />
     <Content Include="Customer_Module\OrderHistory.aspx" />
-    <Content Include="Customer_Module\PaintingAddToCart.aspx" />
-    <Content Include="Customer_Module\PaintingAddToWishlist.aspx" />
-    <Content Include="Customer_Module\PaintingArt.aspx" />
+    <Content Include="Customer_Module\SnackAddToCart.aspx" />
+    <Content Include="Customer_Module\SnackAddToWishlist.aspx" />
+    <Content Include="Customer_Module\Snack.aspx" />
     <Content Include="Customer_Module\PendingOrder.aspx" />
     <Content Include="Customer_Module\PostPayment.aspx" />
-    <Content Include="Customer_Module\UnavailableAddToWishlist.aspx" />
-    <Content Include="Customer_Module\UnavailableArt.aspx" />
+    <Content Include="Customer_Module\BakeryAddToWishlist.aspx" />
+    <Content Include="Customer_Module\Bakery.aspx" />
     <Content Include="Customer_Module\Wishlist.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\logo.jpg" />
@@ -248,26 +249,33 @@
     <Compile Include="adminModel\viewCust.aspx.designer.cs">
       <DependentUpon>viewCust.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\AbstractAddToCart.aspx.cs">
-      <DependentUpon>AbstractAddToCart.aspx</DependentUpon>
+    <Compile Include="Customer_Module\BakeryAddToCart.aspx.cs">
+      <DependentUpon>BakeryAddToCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\AbstractAddToCart.aspx.designer.cs">
-      <DependentUpon>AbstractAddToCart.aspx</DependentUpon>
+    <Compile Include="Customer_Module\BakeryAddToCart.aspx.designer.cs">
+      <DependentUpon>BakeryAddToCart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\AbstractAddToWishlist.aspx.cs">
-      <DependentUpon>AbstractAddToWishlist.aspx</DependentUpon>
+    <Compile Include="Customer_Module\MealAddToCart.aspx.cs">
+      <DependentUpon>MealAddToCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\AbstractAddToWishlist.aspx.designer.cs">
-      <DependentUpon>AbstractAddToWishlist.aspx</DependentUpon>
+    <Compile Include="Customer_Module\MealAddToCart.aspx.designer.cs">
+      <DependentUpon>MealAddToCart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\AbstractArt.aspx.cs">
-      <DependentUpon>AbstractArt.aspx</DependentUpon>
+    <Compile Include="Customer_Module\MealAddToWishlist.aspx.cs">
+      <DependentUpon>MealAddToWishlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\AbstractArt.aspx.designer.cs">
-      <DependentUpon>AbstractArt.aspx</DependentUpon>
+    <Compile Include="Customer_Module\MealAddToWishlist.aspx.designer.cs">
+      <DependentUpon>MealAddToWishlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Meal.aspx.cs">
+      <DependentUpon>Meal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Meal.aspx.designer.cs">
+      <DependentUpon>Meal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer_Module\Address.aspx.cs">
       <DependentUpon>Address.aspx</DependentUpon>
@@ -381,26 +389,26 @@
     <Compile Include="Customer_Module\CustomerWebFormMasterPage.aspx.designer.cs">
       <DependentUpon>CustomerWebFormMasterPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\IllustrationAddToCart.aspx.cs">
-      <DependentUpon>IllustrationAddToCart.aspx</DependentUpon>
+    <Compile Include="Customer_Module\BeverageAddToCart.aspx.cs">
+      <DependentUpon>BeverageAddToCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\IllustrationAddToCart.aspx.designer.cs">
-      <DependentUpon>IllustrationAddToCart.aspx</DependentUpon>
+    <Compile Include="Customer_Module\BeverageAddToCart.aspx.designer.cs">
+      <DependentUpon>BeverageAddToCart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\IllustrationAddToWishlist.aspx.cs">
-      <DependentUpon>IllustrationAddToWishlist.aspx</DependentUpon>
+    <Compile Include="Customer_Module\BeverageAddToWishlist.aspx.cs">
+      <DependentUpon>BeverageAddToWishlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\IllustrationAddToWishlist.aspx.designer.cs">
-      <DependentUpon>IllustrationAddToWishlist.aspx</DependentUpon>
+    <Compile Include="Customer_Module\BeverageAddToWishlist.aspx.designer.cs">
+      <DependentUpon>BeverageAddToWishlist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\IllustrationArt.aspx.cs">
-      <DependentUpon>IllustrationArt.aspx</DependentUpon>
+    <Compile Include="Customer_Module\Beverage.aspx.cs">
+      <DependentUpon>Beverage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\IllustrationArt.aspx.designer.cs">
-      <DependentUpon>IllustrationArt.aspx</DependentUpon>
+    <Compile Include="Customer_Module\Beverage.aspx.designer.cs">
+      <DependentUpon>Beverage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer_Module\LogOut.aspx.cs">
       <DependentUpon>LogOut.aspx</DependentUpon>
@@ -416,26 +424,26 @@
     <Compile Include="Customer_Module\OrderHistory.aspx.designer.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\PaintingAddToCart.aspx.cs">
-      <DependentUpon>PaintingAddToCart.aspx</DependentUpon>
+    <Compile Include="Customer_Module\SnackAddToCart.aspx.cs">
+      <DependentUpon>SnackAddToCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\PaintingAddToCart.aspx.designer.cs">
-      <DependentUpon>PaintingAddToCart.aspx</DependentUpon>
+    <Compile Include="Customer_Module\SnackAddToCart.aspx.designer.cs">
+      <DependentUpon>SnackAddToCart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\PaintingAddToWishlist.aspx.cs">
-      <DependentUpon>PaintingAddToWishlist.aspx</DependentUpon>
+    <Compile Include="Customer_Module\SnackAddToWishlist.aspx.cs">
+      <DependentUpon>SnackAddToWishlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\PaintingAddToWishlist.aspx.designer.cs">
-      <DependentUpon>PaintingAddToWishlist.aspx</DependentUpon>
+    <Compile Include="Customer_Module\SnackAddToWishlist.aspx.designer.cs">
+      <DependentUpon>SnackAddToWishlist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\PaintingArt.aspx.cs">
-      <DependentUpon>PaintingArt.aspx</DependentUpon>
+    <Compile Include="Customer_Module\Snack.aspx.cs">
+      <DependentUpon>Snack.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\PaintingArt.aspx.designer.cs">
-      <DependentUpon>PaintingArt.aspx</DependentUpon>
+    <Compile Include="Customer_Module\Snack.aspx.designer.cs">
+      <DependentUpon>Snack.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer_Module\PendingOrder.aspx.cs">
       <DependentUpon>PendingOrder.aspx</DependentUpon>
@@ -454,19 +462,19 @@
     <Compile Include="Customer_Module\ShowImage.ashx.cs">
       <DependentUpon>ShowImage.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\UnavailableAddToWishlist.aspx.cs">
-      <DependentUpon>UnavailableAddToWishlist.aspx</DependentUpon>
+    <Compile Include="Customer_Module\BakeryAddToWishlist.aspx.cs">
+      <DependentUpon>BakeryAddToWishlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\UnavailableAddToWishlist.aspx.designer.cs">
-      <DependentUpon>UnavailableAddToWishlist.aspx</DependentUpon>
+    <Compile Include="Customer_Module\BakeryAddToWishlist.aspx.designer.cs">
+      <DependentUpon>BakeryAddToWishlist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Module\UnavailableArt.aspx.cs">
-      <DependentUpon>UnavailableArt.aspx</DependentUpon>
+    <Compile Include="Customer_Module\Bakery.aspx.cs">
+      <DependentUpon>Bakery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer_Module\UnavailableArt.aspx.designer.cs">
-      <DependentUpon>UnavailableArt.aspx</DependentUpon>
+    <Compile Include="Customer_Module\Bakery.aspx.designer.cs">
+      <DependentUpon>Bakery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer_Module\Wishlist.aspx.cs">
       <DependentUpon>Wishlist.aspx</DependentUpon>
