@@ -97,17 +97,17 @@
 
             <div class="mySlides fade">
                 <img class="indexWallpaper" src="images/admin.jpg" style="width:100%" alt="photo_1" />
-                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> FoodX Brings Happiness to You </div>
+                <%--<div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" </div>--%>
             </div>
 
             <div class="mySlides fade">
-                <img class="indexWallpaper" src="images/background" style="width:100%" alt="photo_2" />
-                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> We use wok to cook Egg Fried Rice </div>
+                <img class="indexWallpaper" src="images/background.jpg" style="width:100%" alt="photo_2" />
+                <%--<div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg"</div>--%>
             </div>
 
             <div class="mySlides fade">
                 <img class="indexWallpaper" src="images/back4.jpg" style="width:100%" alt="photo_3" />
-                <div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" alt="logo" /> Delicious Food created with perfection </div>
+                <%--<div class="text"> <img class="miniLogoIMG" src="images/logo.jpeg" </div>--%>
             </div>
 
         </div>

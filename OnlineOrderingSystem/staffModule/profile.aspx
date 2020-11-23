@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/staffModule/staff.Master" AutoEventWireup="true" CodeBehind="profile.aspx.cs" Inherits="ArtModule.profile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/staffModule/staff.Master" AutoEventWireup="true" CodeBehind="profile.aspx.cs" Inherits="ItemModule.profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

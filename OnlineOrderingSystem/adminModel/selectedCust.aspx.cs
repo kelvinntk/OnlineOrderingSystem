@@ -10,7 +10,7 @@ namespace adminModel.adminModel
 {
     public partial class updateCust : System.Web.UI.Page
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True");
         SqlCommand cmd = null;
         SqlDataReader rdr = null;
         String id, FN, LN, Contact, Address, Status = "";

@@ -11,7 +11,7 @@ namespace OnlineOrderingSystem.staffModule
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Label1.Text = (string)Session["name"].ToString();
+            Label1.Text = (string)Session["name"].ToString();
             Label2.Text = DateTime.Now.ToString("h:mm:ss tt");//(string)Session["time"].ToString();
         }
     }

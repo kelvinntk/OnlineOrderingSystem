@@ -6,55 +6,55 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ArtModule
+namespace ItemModule
 {
     public partial class profile : System.Web.UI.Page
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True");
         SqlCommand cmd = null;
         SqlDataReader rdr = null;
         String id, FN, LN, Contact, Address, email, pass = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+            
                 conn.Open();
-                //id = Session["UserID"].ToString();
+                id = Session["UserID"].ToString();
 
-                //if (id.Equals(""))
-                //{
-                //    Response.Redirect("artistHome.aspx");
-                //}
+                if (id.Equals(""))
+                {
+                    Response.Redirect("staffHome.aspx");
+                }
 
-                //cmd = new SqlCommand("select * from Artist where ArtistID=" + id + ";", conn);
+                cmd = new SqlCommand("select * from Staff where StaffID=" + id + ";", conn);
 
-                //rdr = cmd.ExecuteReader();
+                rdr = cmd.ExecuteReader();
 
-                //if (rdr.HasRows)
-                //{
-                //    rdr.Read();
-                //    email = Convert.ToString(rdr.GetValue(1));
-                //    pass = Convert.ToString(rdr.GetValue(2));
-                //    FN = Convert.ToString(rdr.GetValue(3));
-                //    LN = Convert.ToString(rdr.GetValue(4));
-                //    Contact = Convert.ToString(rdr.GetValue(5));
-                //    Address = Convert.ToString(rdr.GetValue(6));
-                //}
-                //else
-                //{
-                //    Response.Redirect("artistHome.aspx");
-                //}
+                if (rdr.HasRows)
+                {
+                    rdr.Read();
+                idbox.Text = Session["UserID"].ToString();
+                emailbox.Text = Convert.ToString(rdr.GetValue(1));
+                    pass = Convert.ToString(rdr.GetValue(2));
+                fnbox.Text = Convert.ToString(rdr.GetValue(3));
+                lnbox.Text = Convert.ToString(rdr.GetValue(4));
+                cbox.Text = Convert.ToString(rdr.GetValue(5));
+                addressbox.Text = Convert.ToString(rdr.GetValue(6));
+                }
+                else
+                {
+                    Response.Redirect("staffHome.aspx");
+                }
 
-                idbox.Text = "2001";
-                emailbox.Text = "kaixing7289@gmail.com";
-                fnbox.Text = "Belinda";
-                lnbox.Text = "Yeo";
-                cbox.Text = "010-2345678";
-                addressbox.Text = "Johor";
+                //idbox.Text = "2001";
+                //emailbox.Text = "kaixing7289@gmail.com";
+                //fnbox.Text = "Belinda";
+                //lnbox.Text = "Yeo";
+                //cbox.Text = "010-2345678";
+                //addressbox.Text = "Johor";
 
                 conn.Close();
-            }
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)

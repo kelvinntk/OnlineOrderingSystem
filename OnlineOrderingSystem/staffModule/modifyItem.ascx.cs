@@ -421,7 +421,7 @@ namespace OnlineOrderingSystem.staffModule
 
             Label1.Visible = true;
             Label1.Text = "Item Deleted.";
-            Label1.ForeColor = System.Drawing.Color.Green;
+            Label1.ForeColor = System.Drawing.Color.Red;
             HyperLink1.Visible = true;
         }
     }

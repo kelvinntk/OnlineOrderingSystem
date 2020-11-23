@@ -7,7 +7,7 @@
 </style>
 <div class="uc1">
 Hello
-<asp:Label ID="Label1" runat="server" Text="Belinda"></asp:Label>
+<asp:Label ID="Label1" runat="server" ></asp:Label> <%--Text="Belinda"--%>
 &nbsp;<br />
 you login at
 <asp:Label ID="Label2" runat="server"></asp:Label>

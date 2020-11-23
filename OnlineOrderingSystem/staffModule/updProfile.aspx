@@ -5,7 +5,7 @@
     <table style="width:60%;margin-left:20%;background-color:rgba(200,200,200,.5);">
         <tr>
             <td colspan="2"><center>
-                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Edit Artist's Profile"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Edit Staff's Profile"></asp:Label>
             </center></td>
         </tr>
         <tr>

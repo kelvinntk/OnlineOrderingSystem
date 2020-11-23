@@ -83,7 +83,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected double getCartTotal(string customerID)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -107,7 +107,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected void addOrder(string customerID, string currentDate, string currentTime, double totalAmount)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -126,7 +126,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected string getOrderID(string customerID, string currentDate, string currentTime)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -152,7 +152,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected string getTransactionID(string customerID, string orderID, string currentDate, string currentTime)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -179,7 +179,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected SqlDataReader getCart(string customerID)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -196,7 +196,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected void addOrderDetails(string customerID, string orderID, SqlDataReader dataReader)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -221,7 +221,7 @@ namespace OnlineOrderingSystem.Customer_Module
         
         protected void addTransaction(string orderID, string customerID, string currentDate, string currentTime, double grandTotal, string address)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -244,7 +244,7 @@ namespace OnlineOrderingSystem.Customer_Module
         {
             while (dataReader.Read())
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
                 con.Open();
 
@@ -261,7 +261,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected void deleteCart(string customerID)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -276,7 +276,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected SqlDataReader getCustomer(string customerID)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 

@@ -91,9 +91,9 @@
     <Content Include="adminModel\showOrder.aspx" />
     <Content Include="adminModel\viewStaff.aspx" />
     <Content Include="adminModel\viewCust.aspx" />
-    <Content Include="App_Data\ArtGalleryDB.mdf" />
-    <Content Include="App_Data\ArtGalleryDB_log.ldf">
-      <DependentUpon>ArtGalleryDB.mdf</DependentUpon>
+    <Content Include="App_Data\OrderingDB.mdf" />
+    <Content Include="App_Data\OrderingDB_log.ldf">
+      <DependentUpon>OrderingDB.mdf</DependentUpon>
     </Content>
     <Content Include="Customer_Module\BakeryAddToCart.aspx" />
     <Content Include="Customer_Module\MealAddToCart.aspx" />
