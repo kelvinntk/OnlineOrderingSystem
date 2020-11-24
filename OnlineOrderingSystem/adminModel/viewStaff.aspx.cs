@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -24,9 +25,11 @@ namespace adminModel.adminModel
         }
         protected void btnPrintFromCodeBehind_Click(object sender, EventArgs e)
         {
+
+
+
             try
             {
-
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "printGrid", "printGrid();", true);
             }
             catch { }

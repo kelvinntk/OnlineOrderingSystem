@@ -36,7 +36,7 @@
 
                 <asp:TableCell>
 
-                    <asp:TextBox ID="TextBoxAddress1" runat="server" placeholder="Jalan Gurney 1/A" Width="100%" required="required"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxAddress1" runat="server" placeholder="Jalan Bunga 1/A" Width="100%" required="required"></asp:TextBox>
 
                 </asp:TableCell>
 
@@ -52,7 +52,7 @@
 
                 <asp:TableCell>
 
-                    <asp:TextBox ID="TextBoxAddress2" runat="server" placeholder="Gurney Park" Width="100%" required="required"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxAddress2" runat="server" placeholder="KSL Park" Width="100%" required="required"></asp:TextBox>
 
                 </asp:TableCell>
 
@@ -68,7 +68,7 @@
 
                 <asp:TableCell>
 
-                    <asp:TextBox ID="TextBoxPostcode" runat="server" placeholder="10300" Width="25%" required="required" pattern="[0-9]{5}"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxPostcode" runat="server" placeholder="80300" Width="25%" required="required" pattern="[0-9]{5}"></asp:TextBox>
 
                 </asp:TableCell>
 
@@ -84,7 +84,7 @@
 
                 <asp:TableCell>
 
-                    <asp:TextBox ID="TextBoxCity" runat="server" Width="50%" placeholder="George Town" required="required" pattern="[A-Z a-z]+"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxCity" runat="server" Width="50%" placeholder="Johor Bahru" required="required" pattern="[A-Z a-z]+"></asp:TextBox>
 
                 </asp:TableCell>
 
@@ -100,7 +100,7 @@
 
                 <asp:TableCell>
 
-                    <asp:TextBox ID="TextBoxState" runat="server" Width="50%" placeholder="Penang" required="required" pattern="[A-Z a-z]+"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxState" runat="server" Width="50%" placeholder="Johor" required="required" pattern="[A-Z a-z]+"></asp:TextBox>
 
                 </asp:TableCell>
 

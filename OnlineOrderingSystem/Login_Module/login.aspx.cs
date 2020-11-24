@@ -91,7 +91,7 @@ namespace Login_Module.Login_Module
 
             con.Open();
 
-            string queryStr = "SELECT * FROM [Staff] WHERE Email = @Email AND Password = @Password";
+            string queryStr = "SELECT * FROM [Staff] WHERE Email = @Email AND Password = @Password AND UPPER(Status)='ACTIVE';";
 
             SqlCommand command = new SqlCommand(queryStr, con);
 
@@ -114,7 +114,9 @@ namespace Login_Module.Login_Module
             }
             else
             {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('This account is either inactive or not found in the database. ')", true);
                 return false;
+                
             }
         }
 
