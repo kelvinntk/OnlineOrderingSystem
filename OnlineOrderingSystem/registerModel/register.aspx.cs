@@ -68,7 +68,7 @@ namespace register.registerModel
         {
             if (!Session["condition"].ToString().Equals("not"))
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True");
                 ArtGalleryDBEntities _db = new ArtGalleryDBEntities();
                 TextBox email = (TextBox)FormView1.FindControl("TextBox3");
 

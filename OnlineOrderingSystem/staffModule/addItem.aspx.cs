@@ -162,7 +162,7 @@ namespace ItemModule
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/artistHome.aspx");
+            Response.Redirect("~/staffHome.aspx");
         }
     }
 }
