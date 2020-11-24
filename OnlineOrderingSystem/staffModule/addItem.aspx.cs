@@ -55,7 +55,7 @@ namespace ItemModule
                             SqlParameter paramStaffID = new SqlParameter()
                             {
                                 ParameterName = "@StaffID",
-                                Value = "2001"//Session["UserID"] + ""
+                                Value = Session["UserID"] + ""
                             };
                             cmd.Parameters.Add(paramStaffID);
 

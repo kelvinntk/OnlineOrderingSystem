@@ -237,6 +237,7 @@ namespace OnlineOrderingSystem.staffModule
                         cmd.ExecuteNonQuery();
                         conn.Close();
 
+                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Item Updated successful. ')", true);
                         Label1.Visible = true;
                         Label1.Text = "Item updated without update the image.";
                         Label1.ForeColor = System.Drawing.Color.Green;
@@ -418,7 +419,7 @@ namespace OnlineOrderingSystem.staffModule
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
-
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Are You sure want to delete the item. ')", true);
             Label1.Visible = true;
             Label1.Text = "Item Deleted.";
             Label1.ForeColor = System.Drawing.Color.Red;
