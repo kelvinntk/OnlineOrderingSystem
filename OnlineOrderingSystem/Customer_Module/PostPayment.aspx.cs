@@ -126,7 +126,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected SqlDataReader getCustomer()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -143,7 +143,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected SqlDataReader getOrder()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -161,7 +161,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected SqlDataReader getOrderDetails()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -178,7 +178,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected SqlDataReader getTransaction()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
 
             con.Open();
 
@@ -297,7 +297,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
             //sb.Append("<th style = 'background-color: #D20B0C;>");
             sb.Append("<th align='center'>");
-            sb.Append("<b>Art Name</b>");
+            sb.Append("<b>Item Name</b>");
             sb.Append("</th>");
 
             sb.Append("<th align='center'>");

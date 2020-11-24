@@ -77,6 +77,12 @@
                 <h1>Customer Registration</h1>
             </div>
             <br />
+            <div>
+                <div>
+                  <asp:Label ID="Label1" runat="server" ForeColor="Green"></asp:Label>
+                </div>
+            </div>
+            <br />
             <div class="textbox">
                 <div class="textboxInput">
                     <div class="label">Email</div>
@@ -164,11 +170,7 @@
                 <br />
                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login_Module/login.aspx">I Already have an account?</asp:HyperLink>
                 <asp:Button ID="Button1" class="button" runat="server" OnClick="Button1_Click" Text="Register"/>
-                <div>
-                    <div>
-                        <asp:Label ID="Label1" runat="server" ForeColor="Green"></asp:Label>
-                    </div>
-                </div>
+
             </div>
         </div>
 </asp:Content>

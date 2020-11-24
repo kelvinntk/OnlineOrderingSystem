@@ -13,10 +13,10 @@ namespace OnlineOrderingSystem.registerModel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ArtGalleryDBEntities : DbContext
+    public partial class OrderingDBEntities : DbContext
     {
-        public ArtGalleryDBEntities()
-            : base("name=ArtGalleryDBEntities")
+        public OrderingDBEntities()
+            : base("name=OrderingDBEntities")
         {
         }
     

@@ -467,7 +467,7 @@ namespace OnlineOrderingSystem.Customer_Module
                 byte[] bytes = memoryStream.ToArray();
                 memoryStream.Close();
 
-                MailMessage mm = new MailMessage("duckb532@gmail.com", email);
+                MailMessage mm = new MailMessage("kelvinntk-sm17@student.tarc.edu.my", email);
                 mm.Subject = "Invoice";
                 mm.Body = "Your invoice";
                 mm.Attachments.Add(new Attachment(new MemoryStream(bytes), "Invoice_" + orderID + ".pdf"));
@@ -476,8 +476,8 @@ namespace OnlineOrderingSystem.Customer_Module
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
                 NetworkCredential nc = new NetworkCredential();
-                nc.UserName = "duckb532@gmail.com";
-                nc.Password = "Kaixing0831";
+                nc.UserName = "kelvinntk-sm17@student.tarc.edu.my";
+                nc.Password = "11221999Bb";
 
                 smtp.UseDefaultCredentials = true;
                 smtp.Credentials = nc;

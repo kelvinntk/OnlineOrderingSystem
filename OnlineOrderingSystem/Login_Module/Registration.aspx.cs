@@ -17,7 +17,7 @@ namespace OnlineOrderingSystem.Login_Module
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
             con.Open();
             string queryStr = "INSERT INTO [Customer](Email, Password, First_Name, Last_Name, Contact_No, Address, Status) VALUES (@Email, @Password, @First_Name, @Last_Name, @Contact_No, @Address, @Status) SELECT @@IDENTITY";
 

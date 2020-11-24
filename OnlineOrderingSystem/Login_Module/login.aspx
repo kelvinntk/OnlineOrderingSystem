@@ -46,7 +46,7 @@
                     <br />
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login_Module/forgetPassword.aspx">Forgotten your password?</asp:HyperLink>
                     <br/>
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/registerModel/selectRegis.aspx">Create a new account</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Login_Module/Registration.aspx">Create a new account</asp:HyperLink>
                     <br/><br/>
                     <asp:Button ID="Button1" runat="server" style="padding:0.3em;" class="button" OnClick="Button1_Click" Text="Log In" />
                     <br /><br /><br />

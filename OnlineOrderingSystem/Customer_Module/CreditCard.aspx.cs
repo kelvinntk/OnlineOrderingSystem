@@ -51,7 +51,7 @@ namespace OnlineOrderingSystem.Customer_Module
 
         protected bool checkCreditCard(string cardHolderName, string cardNumber, string cvv, string month, string year, string cardType)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ArtGalleryDB.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OrderingDB.mdf;Integrated Security=True");
 
             con.Open();
 
