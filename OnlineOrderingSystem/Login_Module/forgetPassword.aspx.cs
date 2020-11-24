@@ -56,7 +56,7 @@ namespace OnlineOrderingSystem.Login_Module
             }
             else
             {
-                Labelmsg.Text = TxtEmail.Text + " This email ID is not exixts in our database ! ";
+                Labelmsg.Text = TxtEmail.Text + " This email ID is not exists in our database ! ";
             }
         }
     }
