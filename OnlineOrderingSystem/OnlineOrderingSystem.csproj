@@ -138,6 +138,7 @@
     <Content Include="Customer_Module\Wishlist.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\logo.jpg" />
+    <Content Include="Login_Module\changePassword.aspx" />
     <Content Include="Login_Module\css\loginCSS.css" />
     <Content Include="Login_Module\forgetPassword.aspx" />
     <Content Include="Login_Module\homepage.aspx" />
@@ -493,6 +494,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Module\changePassword.aspx.cs">
+      <DependentUpon>changePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_Module\changePassword.aspx.designer.cs">
+      <DependentUpon>changePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login_Module\forgetPassword.aspx.cs">
       <DependentUpon>forgetPassword.aspx</DependentUpon>

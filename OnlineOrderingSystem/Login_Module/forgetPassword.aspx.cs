@@ -34,10 +34,11 @@ namespace OnlineOrderingSystem.Login_Module
             {
                 string email = sdr["Email"] + "";
                 string password = sdr["Password"] + "";
+                var href = "http://" + Request.Url.Host + ":" + Request.Url.Port + "/Login_Module/changePassword.aspx?Email=" + email;
 
                 MailMessage mm =  new MailMessage ("kelvinntk-sm17@student.tarc.edu.my", TxtEmail.Text);
                 mm.Subject = "Your Password !";
-                mm.Body = "Hello, " + email + " is your Email id <br/> your password is " + password;
+                mm.Body = "Hello, <a href='" + href + "'>HERE</a> to change you password";
                 mm.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com";

@@ -309,7 +309,7 @@ namespace OnlineOrderingSystem.Customer_Module
             StringBuilder sb = new StringBuilder();
             
             sb.Append("<table width='100%' cellspacing='0' cellpadding='2'>");
-            sb.Append("<tr><td align='center' colspan = '2'><h1>Food X</h1><br/>&nbsp;</td></tr>");
+            sb.Append("<tr><td align='center' colspan = '2'><h1>FoodX</h1><br/>&nbsp;</td></tr>");
             sb.Append("<tr><td align='center' colspan = '2'><h2><b>Invoice</b></h2></td></tr>");
             //sb.Append("<tr><td align='center' style='background-color: #18B5F0' colspan = '2'><b></b></td></tr>");
 

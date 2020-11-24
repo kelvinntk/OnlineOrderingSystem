@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OnlineOrderingSystem.Login_Module {
-    
-    
-    public partial class forgetPassword {
-        
+namespace OnlineOrderingSystem.Login_Module
+{
+
+
+    public partial class forgetPassword
+    {
+
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace OnlineOrderingSystem.Login_Module {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-        
+
         /// <summary>
         /// TxtEmail control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace OnlineOrderingSystem.Login_Module {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtEmail;
-        
+
         /// <summary>
         /// BtnPwd control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace OnlineOrderingSystem.Login_Module {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnPwd;
-        
+
         /// <summary>
         /// Labelmsg control.
         /// </summary>

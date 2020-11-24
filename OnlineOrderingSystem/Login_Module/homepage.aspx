@@ -143,7 +143,7 @@
 
     <div align="center">
 
-    <asp:Button ID="Button1" runat="server" style="padding:0.3em;" class="button" Text="START"  BorderWidth="0.1em" Font-Size="1.75em" Font-Strikeout="False" OnClick="Button1_Click" />
+    <asp:Button ID="Button1" runat="server" style="padding:0.3em;" class="button" Text="Login"  BorderWidth="0.1em" Font-Size="1.75em" Font-Strikeout="False" OnClick="Button1_Click" />
 
     </div>
 
