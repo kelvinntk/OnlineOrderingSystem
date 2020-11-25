@@ -12,7 +12,7 @@
             <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
             <asp:BoundField DataField="NoOfStock" HeaderText="NoOfStock" SortExpression="NoOfStock" />
-            <asp:BoundField DataField="DateUploaded" HeaderText="DateUploaded" SortExpression="DateUploaded" />
+            <asp:BoundField DataField="Expr1" HeaderText="Expr1" SortExpression="Expr1" ReadOnly="True" />
             <asp:BoundField DataField="TimeUploaded" HeaderText="TimeUploaded" SortExpression="TimeUploaded" />
             <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
         </Columns>
@@ -28,7 +28,7 @@
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
         </center>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [ItemID], [Item_Name], [Description], [Category], [Price], [NoOfStock], [DateUploaded], [TimeUploaded], [Image], [Status] FROM [Item] WHERE ([StaffID] = @StaffID)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT ItemID, Item_Name, Description, Category, Price, NoOfStock, CONVERT (VARCHAR, DateUploaded, 23) AS Expr1, TimeUploaded, Image, Status FROM Item WHERE (StaffID = @StaffID)">
         <SelectParameters>
             <asp:SessionParameter Name="StaffID" SessionField="adstaffid" Type="Int32" />
         </SelectParameters>

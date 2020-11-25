@@ -20,7 +20,7 @@
 
             <asp:TableCell>
 
-                <asp:TextBox ID="TextBoxCardHolderName" runat="server" style="width:100%;" size="50" placeholder="Stephanie Heartily" pattern="[A-Z a-z]+" required="required"></asp:TextBox>
+                <asp:TextBox ID="TextBoxCardHolderName" runat="server" style="width:100%;" size="50" placeholder="Taylor Mama" pattern="[A-Z a-z]+" required="required"></asp:TextBox>
 
             </asp:TableCell>
 
