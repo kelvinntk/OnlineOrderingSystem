@@ -80,7 +80,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: white;
+            background-color: #E5E4E2;
             padding: 50px;
             border-radius: 5px;
             z-index: 1;

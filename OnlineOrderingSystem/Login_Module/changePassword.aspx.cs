@@ -31,7 +31,7 @@ namespace OnlineOrderingSystem.Login_Module
 
             command.ExecuteScalar();
 
-            Labelmsg.Text = "Your Password has been reset, Go back to Login <br /> Click On The Logo Button to go Back";
+            Labelmsg.Text = "Your Password has been reset, Go back to Login <br /> Click On the Login button at top right corner";
             
         }
 
