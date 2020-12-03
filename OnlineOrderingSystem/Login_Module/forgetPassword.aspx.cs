@@ -38,7 +38,7 @@ namespace OnlineOrderingSystem.Login_Module
 
                 MailMessage mm =  new MailMessage ("kelvinntk-sm17@student.tarc.edu.my", TxtEmail.Text);
                 mm.Subject = "Your Password !";
-                mm.Body = "Hello, <a href='" + href + "'>HERE</a> to change you password";
+                mm.Body = "Hello it seems like you forgotten your password, Don't Worry <br /> CLick <a href='" + href + "'>HERE</a> to change you password";
                 mm.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com";
